@@ -1,8 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Иван Романов](https://up.htmlacademy.ru/htmlcss/20/user/272763).
-* Наставник: [Евгений Соломеин]
-(https://up.htmlacademy.ru/htmlcss/20/tutors#tutor1640655).
+* Наставник: [Евгений Соломеин](https://up.htmlacademy.ru/htmlcss/20/tutors#tutor1640655).
 
 ---
 
