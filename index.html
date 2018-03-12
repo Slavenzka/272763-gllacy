@@ -54,11 +54,11 @@
             </form>
           </li>
           <li class="navigation-user__item">
-            <a href="#">Корзина</a>
+            <p>Корзина</p>
           </li>
         </ul>
       </nav>
-      <p class="navigation-main__contacts">
+      <p class="header__contacts">
         С 10 до 20, ежедневно<br>
         <span>8 812 450-25-25</span>
       </p>
@@ -69,17 +69,17 @@
       <section class="recommend-tastes">
         <h2 class="visually-hidden">Лучшие сочетания вкусов</h2>
         <ul class="recommendation">
-          <li class="recommendation-item">
+          <li class="recommendation__item">
             <p>Крем-брюле и&nbsp;пломбир с&nbsp;малиновым джемом</p>
-            <a class="btn recommendation-button" href="#">Давайте оба!</a>  
+            <a class="btn recommendation-btn" href="#">Давайте оба!</a>  
           </li>
           <li class="recommendation-item">
             <p>Шоколадный пломбир и лимонный сорбет</p>
-            <a class="btn recommendation-button" href="#">Давайте оба!</a>  
+            <a class="btn recommendation-btn" href="#">Давайте оба!</a>  
           </li>
           <li class="recommendation-item">
             <p>Пломбир с&nbsp;помадкой и клубничный щербет</p>
-            <a class="btn recommendation-button" href="#">Давайте оба!</a>  
+            <a class="btn recommendation-btn" href="#">Давайте оба!</a>  
           </li>
         </ul>
       </section>
@@ -133,10 +133,10 @@
         <h2 class="visually-hidden">Информация о&nbsp;магазине</h2>
         <h3 class="about-shop__title">Магазин Глэйси&nbsp;&mdash; это онлайн- и&nbsp;офлайн- магазин по&nbsp;продаже мороженого собственного производства на&nbsp;развес</h3>
         <ul class="about-shop__list">
-          <li class="about-shop__list-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-          <li class="about-shop__list-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-          <li class="about-shop__list-item">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-          <li class="about-shop__list-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+          <li class="about-shop__item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li> 
+          <li class="about-shop__item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+          <li class="about-shop__item">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+          <li class="about-shop__item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
         </ul>
       </article>
       <article class="blog-news">
@@ -149,7 +149,7 @@
         <form class="subscription__form" action="#" method="post">
           <label class="visually-hidden" for="subscription-input">Введите электронную почту:</label>
           <input type="email" name="subscription-form-input" id="subscription-input">
-          <button class="btn btn-subsctiption">Отправить</button>
+          <button class="btn subsctiption-btn">Отправить</button>
         </form>
       </section>
       <section class="full-contacts">
@@ -161,8 +161,9 @@
           <h3>Для заказов по телефону:</h3>
           <p>8 812 450-25-25</p>
           <p>(С 10 до 20 ежедневно)</p>
+          <button class="btn btn-feedback">Форма обратной связи</button>
         </section>
-        <button class="btn btn-feedback">Форма обратной связи</button>
+        
         <div class="feedback-form">
           <b>Мы обязательно вам ответим!</b>
           <form class="feedback-form__content" action="#" method="post">
@@ -175,26 +176,24 @@
               <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
             </p>
             <textarea>Напишите что-нибудь...</textarea>
-          </form>
           <button class="btn feedback-form__btn">Отправить</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="footer-main">
-      <ul class="social-networks">
-        <li><a class="social-networks__button" href="#">Twitter</a></li>
-        <li><a class="social-networks__button" href="#">Instagram</a></li>
-        <li><a class="social-networks__button" href="#">Facebook</a></li>
-        <li><a class="social-networks__button" href="#">VK</a></li>
+      <ul class="social">
+        <li><a class="social__link social__link--twitter" href="#">Twitter</a></li>
+        <li><a class="social__link social__link--instagram" href="#">Instagram</a></li>
+        <li><a class="social__link social__link--facebook" href="#">Facebook</a></li>
+        <li><a class="social__link social__link--vk" href="#">VK</a></li>
       </ul>
-      <ul class="production-info">
-        <li class="production-info__suppliers" ><a href="#">Для поставщиков</a></li>
-        <li class="production-info__about-us"><a href="#">О производстве</a></li>
-      </ul>
-      <ul class="production-documents">
-        <li class="production-documents__item"><a href="#">Наши документы</a></li>
-        <li class="production-documents__item"><a href="#">Экологические стандарты</a></li>
+      <ul class="about">
+        <li class="about__item info__item--suppliers" ><a href="#">Для поставщиков</a></li>
+        <li class="about__item"><a href="#">О производстве</a></li>
+        <li class="about__item"><a href="#">Наши документы</a></li>
+        <li class="about__item"><a href="#">Экологические стандарты</a></li>
       </ul>
       <div class="site-creator-info">
         <b>Сделано в HTML Academy &#64; 2017</b>
