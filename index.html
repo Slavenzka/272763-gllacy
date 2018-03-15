@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -54,7 +55,7 @@
             </form>
           </li>
           <li class="navigation-user__item">
-            <p>Корзина</p>
+            <p>Пусто</p>
           </li>
         </ul>
       </nav>
@@ -73,13 +74,30 @@
             <p>Крем-брюле и&nbsp;пломбир с&nbsp;малиновым джемом</p>
             <a class="btn recommendation-btn" href="#">Давайте оба!</a>  
           </li>
-          <li class="recommendation-item">
+          <li class="recommendation__item">
             <p>Шоколадный пломбир и лимонный сорбет</p>
             <a class="btn recommendation-btn" href="#">Давайте оба!</a>  
           </li>
-          <li class="recommendation-item">
+          <li class="recommendation__item">
             <p>Пломбир с&nbsp;помадкой и клубничный щербет</p>
             <a class="btn recommendation-btn" href="#">Давайте оба!</a>  
+          </li>
+        </ul>
+        <ul class="image-rotation">
+          <li>
+            <button class="image-rotation__switch">
+              Первое изображение  
+            </button>
+          </li>
+          <li>
+            <button class="image-rotation__switch">
+              Второе изображение  
+            </button>
+          </li>
+          <li>
+            <button class="image-rotation__switch">
+              Третье изображение  
+            </button>
           </li>
         </ul>
       </section>
@@ -100,32 +118,24 @@
         <h2 class="visually-hidden">Хиты продаж</h2>
         <ul class="best-sellers__list">
           <li class="best-sellers__list-item">
-            <a class="best-sellers__item-link" href="#">
               <img class="best-sellers__item-pic" src="img/catalog-list-item-1.jpg" width="267" height="267" alt="Апельсиновое мороженое">
               <p class="best-sellers__item-price">310 Р<span>/кг</span></p>
-              <p class="best-sellers__item-description">Сливочное с&nbsp;апельсиновым джемом и&nbsp;цитрусовой стружкой</p>
-            </a>
+              <a class="best-sellers__item-link" href="#">Сливочное с&nbsp;апельсиновым джемом и&nbsp;цитрусовой стружкой</a>
           </li>
           <li class="best-sellers__list-item">
-            <a class="best-sellers__item-link" href="#">
               <img class="best-sellers__item-pic" src="img/catalog-list-item-2.jpg" width="267" height="267" alt="Кофейное мороженое">
               <p class="best-sellers__item-price">380 Р<span>/кг</span></p>
-              <p class="best-sellers__item-description">Сливочно-кофейное с&nbsp;кусочками шоколада</p>
-            </a>
+              <a class="best-sellers__item-link" href="#">Сливочно-кофейное с&nbsp;кусочками шоколада</a>
           </li>
           <li class="best-sellers__list-item">
-            <a class="best-sellers__item-link" href="#">
               <img class="best-sellers__item-pic" src="img/catalog-list-item-3.jpg" width="267" height="267" alt="Клубничное мороженое">
               <p class="best-sellers__item-price">355 Р<span>/кг</span></p>
-              <p class="best-sellers__item-description">Сливочно-клубничное с&nbsp;присыпкой из&nbsp;белого шоколада</p>
-            </a>
+              <a class="best-sellers__item-link" href="#">Сливочно-клубничное с&nbsp;присыпкой из&nbsp;белого шоколада</a>
           </li>
           <li class="best-sellers__list-item">
-            <a class="best-sellers__item-link" href="#">
               <img class="best-sellers__item-pic" src="img/catalog-list-item-4.jpg" width="267" height="267" alt="Мороженое крем-брюле">
               <p class="best-sellers__item-price">415 Р<span>/кг</span></p>
-              <p class="best-sellers__item-description">Сливочное крем-брюле с&nbsp;карамельной подливкой</p>
-            </a>
+              <a class="best-sellers__item-link" href="#">Сливочное крем-брюле с&nbsp;карамельной подливкой</a>
           </li>
         </ul>
       </section>
@@ -156,9 +166,9 @@
         <h2 class="visually-hidden ">Как нас найти</h2>
         <img class="full-contacts__map" src="img/Map.jpg" width="1200" height="430" alt="Расположение магазина на карте">
         <section class="contact-details">
-          <h3>Адрес главного офиса и офлайн магазина:</h3>
+          <h3 class="contact-details__location">Адрес главного офиса и офлайн магазина:</h3>
           <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-          <h3>Для заказов по телефону:</h3>
+          <h3 class="contact-details__phone">Для заказов по телефону:</h3>
           <p>8 812 450-25-25</p>
           <p>(С 10 до 20 ежедневно)</p>
           <button class="btn btn-feedback">Форма обратной связи</button>
@@ -195,8 +205,8 @@
         <li class="about__item"><a href="#">Наши документы</a></li>
         <li class="about__item"><a href="#">Экологические стандарты</a></li>
       </ul>
-      <div class="site-creator-info">
-        <b>Сделано в HTML Academy &#64; 2017</b>
+      <div class="creator-info">
+        <b>Сделано в <a class="creator-info__academy" href="">HTML Academy</a> &#64; 2017</b>
       </div>
     </footer>
   
