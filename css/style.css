@@ -100,6 +100,28 @@ a {
   overflow: hidden;
 }
 
+.btn {
+  padding: 0;
+  
+  font: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: rgb(254,254,254);
+  
+  background-color: rgb(231,75,54);
+  border: none;
+}
+
+.btn:hover {
+  background-color: rgb(236,111,94); 
+}
+
+.btn:active {
+  background-color: rgb(225,97,62);
+}
+
 .navigation-main {
   font-weight: 700;
   line-height: 18px;
@@ -198,18 +220,6 @@ a {
 .header__contacts span {
   font-size: 22px;
   line-height: 24px;
-}
-
-.btn {
-  padding: 0;
-  
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  color: rgb(254,254,254);
-  
-  background: rgb(232,77,55);
-  border: none;
 }
 
 .recommendation {
@@ -444,8 +454,21 @@ tr:nth-last-of-type(1) td:nth-last-of-type(1) {
   line-height: 18px;
   color: rgb(255,255,255);
   
-  background: rgb(166,183,174);
+  background-color: rgb(166,183,174);
   border: 2px solid rgb(255,255,255);
+}
+
+.filter__btn:hover {
+  color: rgb(50,50,50);
+  
+  background-color: rgb(251,252,251); 
+}
+
+.filter__btn:hover {
+  color: rgb(50,50,50);
+  
+  background-color: rgb(234,234,234);
+  border: 2px solid rgb(234,234,234);
 }
 
 .catalog {
