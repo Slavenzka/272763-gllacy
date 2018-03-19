@@ -519,6 +519,7 @@ tr:nth-last-of-type(1) td:nth-last-of-type(1) {
 
 .navigation-main {
   display: flex;
+  align-items: flex-start;
   width: 1200px;
   padding: 0 27px;
   margin: 0 auto;
@@ -532,26 +533,53 @@ tr:nth-last-of-type(1) td:nth-last-of-type(1) {
 }
 
 .navigation-site {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin: 0;
+  margin-left: 24px;
   padding: 0;
+  width: 349px;
+  
   background-color: rgba(247,242,87,0.5);
 }
 
 .navigation-user {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   margin-left: auto;
   padding: 0;
+  width: 262px;
+  
   background-color: rgba(247,242,87,0.5);
 }
 
 .header__contacts {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  width: 167px;
+  width: 1200px;
   height: 38px;
-  float: right;
   background-color: rgba(247,242,87,0.5);
 }
+
+.navigation-catalog {
+  display: none; 
+}
+
+.navigation-user__search-wrapper {
+  display: none; 
+}
+
+.navigation-user__login-wrapper {
+  display: none; 
+}
+
+.user-cart {
+  display: none; 
+}
+
+
 
 
 

@@ -31,31 +31,53 @@
         <ul class="navigation-user">
           <li class="navigation-user__item">
             <span class="navigation-user__item-search">Поиск</span>    <!--span-->
-              <form class="search-form" action="#" method="post">
-                <label class="visually-hidden" for="search-form-header">Введите поисковый запрос:</label>
-                <input type="search" name="search-form__request" id="search-form-header" placeholder="Что ищем?">
-              </form>      
+              <div class="navigation-user__search-wrapper">
+                <form class="search-form" action="#" method="post">
+                  <label class="visually-hidden" for="search-form-header">Введите поисковый запрос:</label>
+                  <input type="search" name="search-form__request" id="search-form-header" placeholder="Что ищем?">
+                </form>
+              </div>      
           </li>
           <li class="navigation-user__item">
             <span class="navigation-user__item-login">Вход</span>
-            <form class="form-login" action="#" method="post">
-              <p class="form-login__email">
-                <label class="visually-hidden" for="form-login-email">Введите электронную почту:</label>
-                <input type="email" name="form-login__email-input" id="form-login-email" placeholder="Электронная почта">
-              </p>
-              <p class="form-login__pass">
-                <label class="visually-hidden" for="form-login-pass">Введите пароль:</label>
-                <input type="password" name="form-login__pass-input" id="form-login-pass" placeholder="Пароль">
-              </p>
-              <button class="btn form-login__btn">Войти</button>
-              <ul class="form-login__user-reg">
-                <li><a href="#">Забыли пароль?</a></li>
-                <li><a href="#">Новая регистрация</a></li>
-              </ul>
-            </form>
+            <div class="navigation-user__login-wrapper">
+              <form class="form-login" action="#" method="post">
+                <p class="form-login__email">
+                  <label class="visually-hidden" for="form-login-email">Введите электронную почту:</label>
+                  <input type="email" name="form-login__email-input" id="form-login-email" placeholder="Электронная почта">
+                </p>
+                <p class="form-login__pass">
+                  <label class="visually-hidden" for="form-login-pass">Введите пароль:</label>
+                  <input type="password" name="form-login__pass-input" id="form-login-pass" placeholder="Пароль">
+                </p>
+                <button class="btn form-login__btn">Войти</button>
+                <ul class="form-login__user-reg">
+                  <li><a href="#">Забыли пароль?</a></li>
+                  <li><a href="#">Новая регистрация</a></li>
+                </ul>
+              </form>
+            </div>
           </li>
           <li class="navigation-user__item">
             <span>Пусто</span>
+            <div class="user-cart">
+              <table class="user-cart__content">
+                <tr>
+                  <td class="user-cart__content-name">Пломбир с&nbsp;апельсиновым джемом</td>
+                  <td class="user-cart__content-price">1,5 кг х 200 руб.</td>
+                  <td class="user-cart__content-total">300 руб.</td>
+                </tr>
+                <tr>
+                  <td class="user-cart__content-name">Клубничный пломбир с&nbsp;присыпкой из&nbsp;белого шоколада</td>
+                  <td class="user-cart__content-price">1,5 кг х 300 руб.</td>
+                  <td class="user-cart__content-total">450 руб.</td>
+                </tr>
+                <tr>
+                  <td class="user-cart__content-grandtotal" colspan="3">Итого: 750 руб.</td>    
+                </tr>
+              </table>
+              <button class="btn btn-cart">Оформить заказ</button>
+            </div>
           </li>
         </ul>
       </nav>
