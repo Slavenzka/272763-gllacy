@@ -10,7 +10,7 @@
 
   <body>
     <header class="header-main">
-      <nav class="navigation-main">
+      <nav class="navigation-main">      
         <a class="navigation-main__logo">
           <img class="navigation-main__logo-pic" src="img/Header-Logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
         </a>
@@ -30,14 +30,14 @@
         </ul>
         <ul class="navigation-user">
           <li class="navigation-user__item">
-            <p class="navigation-user__item-search">Поиск</p>    
+            <span class="navigation-user__item-search">Поиск</span>    <!--span-->
               <form class="search-form" action="#" method="post">
                 <label class="visually-hidden" for="search-form-header">Введите поисковый запрос:</label>
                 <input type="search" name="search-form__request" id="search-form-header" placeholder="Что ищем?">
               </form>      
           </li>
           <li class="navigation-user__item">
-            <p class="navigation-user__item-login">Вход</p>
+            <span class="navigation-user__item-login">Вход</span>
             <form class="form-login" action="#" method="post">
               <p class="form-login__email">
                 <label class="visually-hidden" for="form-login-email">Введите электронную почту:</label>
@@ -55,7 +55,7 @@
             </form>
           </li>
           <li class="navigation-user__item">
-            <p>Пусто</p>
+            <span>Пусто</span>
           </li>
         </ul>
       </nav>

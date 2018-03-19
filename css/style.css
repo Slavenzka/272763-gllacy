@@ -98,6 +98,7 @@ a {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+  font-size: 0;
 }
 
 .btn {
@@ -178,13 +179,13 @@ a {
   list-style: none;
 }
   
-.navigation-user p {
+.navigation-user span {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
 }
 
-.navigation-user__item:hover > p {
+.navigation-user__item:hover > span {
   color: rgb(50,50,50);
   
   background-color: rgb(248,247,244);
@@ -510,8 +511,47 @@ tr:nth-last-of-type(1) td:nth-last-of-type(1) {
 }
 
 
+/*Сетки*/
 
+.header-main {
+  background-color: rgba(247,87,172,0.2);
+}
 
+.navigation-main {
+  display: flex;
+  width: 1200px;
+  padding: 0 27px;
+  margin: 0 auto;
+}
+
+.navigation-main__logo {
+  width: 154px;
+  height: 64px;
+  background-color: rgba(247,242,87,0.5);
+  
+}
+
+.navigation-site {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(247,242,87,0.5);
+}
+
+.navigation-user {
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  background-color: rgba(247,242,87,0.5);
+}
+
+.header__contacts {
+  margin: 0;
+  padding: 0;
+  width: 167px;
+  height: 38px;
+  float: right;
+  background-color: rgba(247,242,87,0.5);
+}
 
 
 
