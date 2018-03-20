@@ -79,14 +79,19 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-  color: #ffffff;
+  color: rgb(255,255,255);
   
-  background-color: #95aa9e; 
+  background-color: rgb(149,170,158); 
 }
 
 a {
-  color: #ffffff;
+  color: rgb(255,255,255);
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -134,7 +139,7 @@ a {
 
 .navigation-site__item:hover {
   background-color: rgb(247,246,243);
-}
+}  
 
 .navigation-site__item > a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -146,25 +151,46 @@ a {
 }
 
 .navigation-catalog {
-  background: rgb(248,247,244);
+  margin: 0;
+  padding: 0;
 }
 
 .navigation-catalog__item {
-  font-size: 14px;
+  display: block;
+  height: 28px;
+  box-sizing: border-box;
   font-weight: 400;
   line-height: 16px;
   
   list-style: none;
 }
 
+.navigation-catalog__item:first-child {
+  height: 38px;  
+}
+
+.navigation-catalog__item:nth-child(3) {
+  height: 36px;
+}
+
+.navigation-catalog__border {
+  margin-left: 6px;
+  margin-right: 9px;
+  
+  line-height: 0px;
+  
+  border-bottom: 1px solid rgba(50,50,50,0.2);
+  list-style: none;
+}
+
 .navigation-catalog__item a {
   color: rgb(50,50,50);
+  
+  font-size: 14px;
 }
 
 .navigation-catalog__item:first-of-type {
   font-weight: 700;
-  
-  border-bottom: 1px solid rgba(50,50,50,0.2);
 }
 
 .navigation-catalog__item:hover {
@@ -173,6 +199,10 @@ a {
 
 .navigation-catalog__item:active {
   background-color: rgb(246,181,165);
+}
+
+.navigation-catalog__item--visiting {
+  background-color: rgb(208,112,88); 
 }
 
 .navigation-user {
@@ -185,7 +215,7 @@ a {
   line-height: 16px;
 }
 
-.navigation-user__item:hover > span {
+.navigation-user__item:not(:last-of-type):hover > span {
   color: rgb(50,50,50);
   
   background-color: rgb(248,247,244);
@@ -305,7 +335,7 @@ a {
 }
 
 .blog-news__link:hover,
-blog-news__link:active {
+.blog-news__link:active {
   color: rgb(232, 77, 55);
   border-bottom: 1px solid rgba(232,77,55,0.3); 
 }
@@ -510,61 +540,179 @@ tr:nth-last-of-type(1) td:nth-last-of-type(1) {
   background-color: rgb(157,177,165);
 }
 
-
 /*Сетки*/
 
+.container {
+  max-width: 1146px;
+  padding: 0 27px;
+  margin: 0 auto; 
+}
+
 .header-main {
-  background-color: rgba(247,87,172,0.2);
+  display: flex;
+  justify-content: space-between;
 }
 
 .navigation-main {
   display: flex;
   align-items: flex-start;
-  width: 1200px;
-  padding: 0 27px;
-  margin: 0 auto;
 }
 
 .navigation-main__logo {
   width: 154px;
   height: 64px;
-  background-color: rgba(247,242,87,0.5);
-  
+  margin-top: 9px;
 }
 
 .navigation-site {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
+  width: 378px;
   margin: 0;
-  margin-left: 24px;
+  margin-top: 23px;
+  margin-left: 10px;
   padding: 0;
-  width: 349px;
-  
-  background-color: rgba(247,242,87,0.5);
+}
+
+.navigation-site__item {
+  border-radius: 25px;
+  padding: 7px 13px 7px;
+  margin-right: 2px;
+}
+
+.navigation-aux {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 262px;
 }
 
 .navigation-user {
-  display: flex;
-  justify-content: space-between;
   margin: 0;
-  margin-left: auto;
   padding: 0;
-  width: 262px;
-  
-  background-color: rgba(247,242,87,0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  height: 55px;
 }
+
+.navigation-user__item {
+  position: relative;
+  margin-top: 23px;
+}
+
+.navigation-user__item span {
+  background: rgba(255,255,255,0.2);
+}
+
+.navigation-user__item-search {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.2)
+}
+
+.navigation-user__item svg {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+
+.navigation-user__item-search:hover path {
+  fill: rgb(51,51,51);   
+}
+
+.navigation-user__item-login {
+  display: inline-block;
+  width: 92px;
+  
+  box-sizing: border-box;
+  padding: 8px 17px 8px 44px;
+  margin-left: 10px;
+  border-radius: 25px;
+}
+
+.navigation-user__item-login svg {
+  position: absolute;
+  left: 26px;
+  top: 6px;
+}
+
+.navigation-user__item-login:hover path,
+.navigation-user__item-login:hover polygon {
+  fill: rgb(51,51,51); 
+}
+
+.navigation-user__item-cart {
+  display: inline-block;
+  width: 117px;
+  
+  box-sizing: border-box;
+  padding: 8px 34px 8px 45px;
+  margin-left: 10px;
+  border-radius: 25px;
+}
+
+.navigation-user__item-cart svg {
+  position: absolute;
+  top: 6px;
+  left: 26px;
+}
+
+.navigation-user__item-cart polygon {
+  fill: rgba(255,255,255,0.2); 
+}
+
+/*Правила класса для корзины с товарами - начало*/
+
+.cart-with-items path,
+.cart-with-items circle {
+  fill: rgb(52,52,52); 
+}
+
+.cart-with-items polygon {
+  fill: rgb(232,77,55); 
+}
+
+/*Правила класса для корзины с товарами - конец*/
 
 .header__contacts {
-  margin: 0 auto;
+  margin: 0;
+  margin-top: 18px;
   padding: 0;
-  width: 1200px;
-  height: 38px;
-  background-color: rgba(247,242,87,0.5);
 }
 
+.header__contacts span {
+  margin: 0;
+  padding: 0;
+  display: block;
+  margin-top: 4px;
+  margin-right: -1px;
+}
+
+.navigation-site__item:first-child {
+  position: relative; 
+}
+
+
 .navigation-catalog {
-  display: none; 
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 143px;
+  height: 171px;
+  top: 37px;
+  left: -7px;
+  
+  z-index: 1;
+  
+  background-color: rgb(248,247,244);
+  border-radius: 5px;
 }
 
 .navigation-user__search-wrapper {
@@ -578,6 +726,69 @@ tr:nth-last-of-type(1) td:nth-last-of-type(1) {
 .user-cart {
   display: none; 
 }
+
+.recommend-tastes {
+  margin: 0;
+  padding: 0;
+  
+  position: relative;
+  
+  background-color: rgba(115,144,240,0.3); 
+}
+
+.recommendation {
+  margin: 0;
+  padding: 0; 
+}
+
+.recommendation__item p {
+  margin: 0;
+  padding: 0;
+  
+  background-color: red; 
+}
+
+.recommendation__item p {
+  padding: 0 265px; 
+}
+
+
+.recommendation__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 529px;
+}
+
+.recommendation__item:first-child {
+  background-color: rgb(149,170,158);
+}
+
+.recommendation__item:nth-child(2) {
+  background-color: rgb(137,150,166);
+}
+
+.recommendation__item:last-child {
+  background-color: rgb(157,139,132);
+}
+
+.image-rotation {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  bottom: 0px;
+  
+  position: absolute;
+}
+
+.image-rotation__switch {
+  background-color: transparent;
+  border: none;
+}
+
+
+
 
 
 
