@@ -119,14 +119,13 @@ img {
   background: linear-gradient(rgb(231,74,53), rgb(242,104,67));
   border: none;
   border-radius: 17% / 50%;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: rgb(236,111,94); 
 }
 
 .btn:active {
-  background-color: rgb(225,97,62);
 }
 
 .container {
@@ -169,42 +168,41 @@ img {
   list-style: none;
 }
 
+
 .navigation-site__item {
-  padding: 0 13px 0px 14px;
-  border-radius: 25px;
   margin-right: 1px;
 }
 
-.navigation-site__item a {
+.navigation-site__item-link {
   padding: 7px 0;
-/*  background-color: red;*/
 }
 
-/*
 .navigation-site__item > a {
-  background-color: red;
+  display: block;
+  height: 25px;
+  padding: 7px 13px 0px 14px;
   
+  border-radius: 25px; 
 }
-*/
 
 .navigation-site__item:first-child {
   position: relative; 
 }
 
-.navigation-site__item:hover {
+.navigation-site__item-link:hover,
+.navigation-site__item-link:focus {
   background-color: rgb(247,246,243);
-}  
-
-.navigation-site__item > a {
-  display: block;
-  
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-} 
-
-.navigation-site__item:hover > a {
   color: rgb(50,50,50);
   border-bottom: none;
+}  
+
+.navigation-site__item span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.navigation-site__item-link:hover span {
+  border-bottom: none;
+} 
 
 .navigation-catalog__wrapper {
   background-color: transparent;
@@ -212,9 +210,8 @@ img {
   width: 143px;
   position: absolute;
   left: -7px;
-  top: 0px;
+  top: 32px;
   padding-top: 0px;
-  z-index: 2;
   display: none;
 }
 
@@ -223,7 +220,7 @@ img {
   padding: 0;
   position: absolute;
   width: 143px;
-  top: 37px;
+  top: 5px;
   left: 0px;
   padding-bottom: 6px;
   
@@ -233,8 +230,8 @@ img {
   border-radius: 5px;
 }
 
-.navigation-site__item:first-of-type:hover .navigation-catalog__wrapper {
-  display: block; 
+.navigation-site__item:hover .navigation-catalog__wrapper {
+  display: block;
 }
 
 .navigation-catalog__item {
@@ -291,11 +288,11 @@ img {
   font-weight: 700;
 }
 
-.navigation-catalog__item:hover {
+.navigation-catalog__item:hover a {
   background-color: rgb(251,222,215);
 }
 
-.navigation-catalog__item:active {
+.navigation-catalog__item:active a {
   background-color: rgb(246,181,165);
 }
 
@@ -349,6 +346,10 @@ img {
   
   background-color: rgb(248,247,244);
   cursor: default;
+}
+
+.navigation-user__item:last-of-type:hover {
+  cursor: default; 
 }
 
 .navigation-user__item-search {
@@ -574,16 +575,19 @@ img {
   height: 529px;
 }
 
+.recommendation__item:not(:first-child) {
+  display: none; 
+}
+
 .recommendation__item p {
   margin: 0;
-  padding: 0 265px;
+  margin-bottom: 30px;
+  padding: 0 235px;
   
   font-size: 60px;
   font-weight: 700;
   line-height: 60.35px;
   text-align: center;
-  
-  background-color: red;
 }
 
 .recommendation__item:first-child {
@@ -596,6 +600,19 @@ img {
 
 .recommendation__item:last-child {
   background-color: rgb(157,139,132);
+}
+
+.recommendation-btn {
+  height: 54px;
+  width: 280px;
+  margin-bottom: 40px;
+  padding-top: 10px;
+  
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  
+  border-radius: 32px / 32px;
 }
 
 .image-rotation {
@@ -613,26 +630,101 @@ img {
   border: none;
 }
 
+.promo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1px;
+  height: 229px;
+}
+
 .promo__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 560px;
+  font-size: 0px;
   font-weight: 700;
 }
 
+.promo__item:first-of-type {
+  background-image: url("../img/Background-raspberry.png");
+  background-repeat: no-repeat;
+}
+
+.promo__item:last-of-type {
+  background-image: url("../img/Background-choko.png");
+  background-repeat: no-repeat;
+}
+
 .promo__item-title {
+  margin: 0;
+  margin-top: 16px;
+  margin-left: 18px;
+  padding: 0;
+  
   font-size: 35px; 
   line-height: 41px;
 }
 
 .promo__item-content {
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+  margin-left: 20px;
+  
   font-size: 18px;
 }
 
+.promo__item-btn {
+  align-self: flex-end;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 21px;
+  padding-top: 10px;
+  padding-left: 21px;
+  padding-right: 22px;
+  padding-bottom: 12px;
+  margin-top: 44px;
+  
+  border-radius: 23px / 23px;
+}
+
+.promo__item--berry .promo__item-btn {
+  padding-left: 22px;
+  padding-right: 23px;
+}
+
+.promo__item--choko .promo__item-btn {
+  padding-top: 9px;
+}
+
 .best-sellers__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  
   list-style: none;
 }
 
+.best-sellers__list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
 .best-sellers__item-link {
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  margin-top: 13px;
+  width: 267px;
+  
+  text-align: center;
   font-weight: 500;
+  
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 .best-sellers__item-link:hover,
@@ -641,14 +733,50 @@ img {
   border-bottom: 1px solid rgba(255,188,158,0.3)
 }
 
+.best-sellers__item-pic {
+  width: 267px;
+  height: 267px;
+}
+
+.best-sellers__list-item::before {
+  content: "";
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  top: 0px;
+  left: 0px;
+  
+  background-image: url("../img/Best-seller-mark.svg");
+  border-radius: 50%;
+  z-index: 1;
+}
+
 .best-sellers__item-price {
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+  position: absolute;
+  top: 209px;
+  
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
 }
 
 .best-sellers__item-price span {
+  margin-left: 36px;
   font-size: 30px;
+}
+
+.best-sellers__item-price span:before {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 36px;
+  top: 6px;
+  left: 80px;
+  
+  background-image: url("../img/Catalog-list-item-currency.svg");
 }
 
 .about-shop__title {
@@ -1127,12 +1255,15 @@ img {
   border-bottom: 1px solid rgba(255,188,158,0.3)
 }
 
-/*Правила класса для корзины с товарами - начало*/
+/*Посещаемые страницы*/
 
+.active-visit {
+  background-color: rgb(208,112,88);  
+}
 
-
-/*Правила класса для корзины с товарами - конец*/
-
+.active-visit span {
+  border-bottom: none; 
+}
 
 
 
