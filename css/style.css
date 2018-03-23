@@ -812,10 +812,9 @@ img {
   padding-top: 24px;
   padding-bottom: 2px;
   
-  background-color: white;
   background-image: url("../img/Pattern-waffle.jpg");
-  background-repeat: no-repeat;
-/*  background-size: cover;*/
+  background-repeat: repeat no-repeat;
+  background-position: 15px 50%;
   border-radius: 14px;
 }
 
@@ -846,6 +845,7 @@ img {
   padding-bottom: 22px;
   width: 538px;
   box-sizing: border-box;
+  position: relative;
   
   color: rgb(50,50,50);
 }
@@ -854,20 +854,84 @@ img {
   padding-left: 56px; 
 }
 
+.about-shop__item::before {
+  content: "";
+  width: 49px;
+  height: 49px;
+  position: absolute;
+  top: -13px;
+  left: 0;
+}
+
+.about-shop__item:nth-of-type(2n)::before {
+  left: -3px; 
+}
+
+.about-shop__item:first-of-type::before {
+  background-image: url("../img/About-shop-icon-icecream.svg"); 
+}
+
+.about-shop__item:nth-of-type(2)::before {
+  background-image: url("../img/About-shop-icon-cow.svg"); 
+}
+
+.about-shop__item:nth-of-type(3)::before {
+  background-image: url("../img/About-shop-icon-leaf.svg"); 
+}
+
+.about-shop__item:nth-of-type(4)::before {
+  background-image: url("../img/About-shop-icon-thermo.svg"); 
+}
+
+.community-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.community-content div {
+  margin: 40px 0;
+  
+  border-radius: 14px;
+}
+
+.blog-news {
+  width: 539px;
+  padding-top: 23px;
+  padding-left: 21px;
+  padding-bottom: 81px;
+  
+  background: red;
+  background-image: url("../img/Background-strawberry.jpg");
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  background-position: -52px -224px;
+/*
+  background-size: 160%;
+  background-position: -62px -235px;
+*/
+}
+
 .blog-news__title {
+  margin: 0;
+  padding: 0;
+  
+  font-size: 16px;
   font-weight: 500;
+  line-height: 22px;
   
   color: rgb(50,50,50);
 }
 
 .blog-news__link {
+  display: block;
+  width: 285px;
+  margin-top: 4px;
+  
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
   color: rgb(50,50,50);
-  
-  border-bottom: 2px solid rgb(50,50,50);
-  background-color: rgb(255,255,255); /*Убрать как появится оформление*/
+  text-decoration: underline;
 }
 
 .blog-news__link:hover,
@@ -876,8 +940,31 @@ img {
   border-bottom: 1px solid rgba(232,77,55,0.3); 
 }
 
+.subscription {
+  width: 560px;
+  
+  background-color: green; 
+}
+
+.subscription p {
+  margin: 0;
+  padding: 0;
+}
+
 .subscription__content {
   color: rgb(90,90,90);
+}
+
+.full-contacts {
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.full-contacts__map {
+
 }
 
 .contact-details {
@@ -891,6 +978,9 @@ img {
 }
 
 .contact-details__location + p {
+  margin: 0;
+  padding: 0;
+  
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
