@@ -116,7 +116,7 @@ img {
   text-align: center;
   color: rgb(254,254,254);
   
-  background: linear-gradient(rgb(231,74,53), rgb(242,104,67));
+  background: linear-gradient(rgb(242,104,67), rgb(231,74,53));
   border: none;
   border-radius: 17% / 50%;
   cursor: pointer;
@@ -642,19 +642,21 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 560px;
+  max-width: 560px;
   font-size: 0px;
   font-weight: 700;
 }
 
 .promo__item:first-of-type {
-  background-image: url("../img/Background-raspberry.png");
+  background-image: url("../img/Background-raspberry.jpg");
   background-repeat: no-repeat;
+  border-radius: 14px;
 }
 
 .promo__item:last-of-type {
-  background-image: url("../img/Background-choko.png");
+  background-image: url("../img/Background-choco.jpg");
   background-repeat: no-repeat;
+  border-radius: 14px;
 }
 
 .promo__item-title {
@@ -705,16 +707,16 @@ img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 40px;
   
   list-style: none;
 }
 
-.best-sellers__list-item {
+.best-sellers__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding: 40px 0px 38px 0px;
 }
 
 .best-sellers__item-link {
@@ -736,14 +738,15 @@ img {
 .best-sellers__item-pic {
   width: 267px;
   height: 267px;
+  border-radius: 50%; 
 }
 
-.best-sellers__list-item::before {
+.best-sellers__item::before {
   content: "";
   position: absolute;
   width: 61px;
   height: 61px;
-  top: 0px;
+  top: 40px;
   left: 0px;
   
   background-image: url("../img/Best-seller-mark.svg");
@@ -756,7 +759,7 @@ img {
   padding: 0;
   align-self: flex-start;
   position: absolute;
-  top: 209px;
+  top: 249px;
   
   font-size: 45px;
   font-weight: 700;
@@ -779,7 +782,47 @@ img {
   background-image: url("../img/Catalog-list-item-currency.svg");
 }
 
+.best-sellers__item-background {
+  position: absolute;
+  width: 280px;
+  height: 100%;
+  top: 36px;
+  left: -6px;
+  display: none;
+  
+  background: rgba(255,255,255,0.2);
+  border-radius: 5px;
+}
+
+.best-sellers__item:hover .best-sellers__item-background {
+  display: block; 
+}
+
+.best-sellers__btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 340px;
+  padding: 10px 17px;
+  
+  border-radius: 18px / 21px;
+}
+
+.about-shop {
+  padding: 20px;
+  padding-top: 24px;
+  padding-bottom: 2px;
+  
+  background-color: white;
+  background-image: url("../img/Pattern-waffle.jpg");
+  background-repeat: no-repeat;
+/*  background-size: cover;*/
+  border-radius: 14px;
+}
+
 .about-shop__title {
+  margin: 0;
+  
+  
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
@@ -787,8 +830,28 @@ img {
   color: rgb(50,50,50);
 }
 
+.about-shop__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  padding-top: 21px;
+  margin: 0;
+  
+  list-style: none;
+}
+
 .about-shop__item {
+  padding-left: 55px;
+  padding-bottom: 22px;
+  width: 538px;
+  box-sizing: border-box;
+  
   color: rgb(50,50,50);
+}
+
+.about-shop__item:nth-child(2n+1) {
+  padding-left: 56px; 
 }
 
 .blog-news__title {
