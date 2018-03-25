@@ -54,7 +54,7 @@
                   <div class="navigation-user__search-area">    
                      <form class="search-form" action="#" method="post">
                       <label class="visually-hidden" for="search-form-header">Введите поисковый запрос:</label>
-                      <input type="search" name="search-form__request" id="search-form-header" placeholder="Что ищем?">
+                      <input type="search" name="search-form__request" class="input-actions" id="search-form-header" placeholder="Что ищем?">
                     </form>
                   </div>    
                 </div>      
@@ -75,11 +75,11 @@
                     <form class="form-login" action="#" method="post">
                       <p class="form-login__items form-login__email">
                         <label class="visually-hidden" for="form-login-email">Введите электронную почту:</label>
-                        <input type="email" name="form-login__email-input" id="form-login-email" placeholder="Электронная почта">
+                        <input type="email" name="form-login__email-input" class="input-actions" id="form-login-email" placeholder="Электронная почта">
                       </p>
                       <p class="form-login__items form-login__pass">
                         <label class="visually-hidden" for="form-login-pass">Введите пароль:</label>
-                        <input type="password" name="form-login__pass-input" id="form-login-pass" placeholder="Пароль">
+                        <input type="password" name="form-login__pass-input" class="input-actions" id="form-login-pass" placeholder="Пароль">
                       </p>
                       <div class="form-login__bottom-wrapper">
                         <button class="btn form-login__btn">Войти</button>
@@ -398,7 +398,7 @@
             <label class="visually-hidden">Укажите почту для ответа:</label>
             <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
           </p>
-          <textarea cols="48" rows="6">Напишите что-нибудь...</textarea>
+          <textarea cols="48">Напишите что-нибудь...</textarea>
           <button class="btn feedback-form__btn">Отправить</button>
         </form>
         <button class="feedback__btn-close"><span class="visually-hidden">Закрыть</span></button>

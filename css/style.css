@@ -124,13 +124,47 @@ img {
 }
 
 .btn:hover {
-  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  background: linear-gradient(to bottom, rgb(245,134,105) 0%, rgb(236,111,94) 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1); 
 }
 
 .btn:active {
-  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  background: linear-gradient(to bottom, rgb(216,71,50) 0%, rgb(225,97,62) 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.input-actions {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  color: rgb(50,50,50);
+  
+  border-radius: 5px;
+  border: 1px solid rgb(211,211,210);  
+}
+
+.input-actions:hover {
+  border: 2px solid rgb(154,154,154);
+  padding-left: 14px; 
+}
+
+.input-actions:focus {
+  border: 2px solid rgba(46,136,228,0.52);
+  padding-left: 14px;
+}
+
+.input-actions::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(153,153,153); 
+}
+
+.input-actions:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(153,153,153); 
 }
 
 .container {
@@ -243,7 +277,6 @@ img {
 .navigation-catalog__item {
   display: flex;
   align-items: center;
-/*  height: 28px;*/
   box-sizing: border-box;
   font-weight: 400;
   line-height: 16px;
@@ -410,15 +443,7 @@ img {
   box-sizing: border-box;
   width: 100%;
   height: 44px;
-  padding-left: 14px;
-  
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  color: rgb(153,153,153);
-  
-  border-radius: 5px;
-  border: 1px solid rgb(211,211,210);
+  padding-left: 15px;
 }
 
 .navigation-user__login-wrapper {
@@ -441,13 +466,13 @@ img {
 
 .navigation-user__login-area {
   position: absolute;
-  right: 0;
+  right: 2px;
   top: 0;
   box-sizing: border-box;
   width: 277px; 
   height: 214px;
   margin-top: 36px;
-  padding: 20px 19px 0px 17px;
+  padding: 20px 17px 0px 19px;
   font-size: 0;
   
   background-color: rgb(248,247,244);
@@ -480,12 +505,11 @@ img {
   box-sizing: border-box;
   width: 100%;
   height: 44px;
-  padding-left: 14px;
+  padding-left: 15px;
   
   font-size: 14px;
-  font-weight: 400;
   line-height: 24px;
-  color: rgb(153,153,153);
+  color: rgb(50,50,50);
   
   border-radius: 5px;
   border: 1px solid rgb(211,211,210);   
@@ -503,6 +527,7 @@ img {
 .form-login__user-reg {
   margin: 0;
   margin-top: 2px;
+  margin-right: -1px;
   padding: 0;
   display: flex;
   height: 38px;
@@ -513,7 +538,6 @@ img {
 .form-login__user-reg li {
   background-color: rgb(248,247,244);
   list-style: none;
-/*  height: 20px;*/
   
   font-size: 13px;
   font-weight: 400;
@@ -675,6 +699,10 @@ img {
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider-controls label:hover {
+  background-color: rgba(248,247,244,0.4); 
 }
 
 #product-1:checked ~ .site-wrapper {
@@ -1042,6 +1070,8 @@ img {
 }
 
 .subscription-area {
+  height: 210px;
+  box-sizing: border-box;
   padding: 0;
   padding-bottom: 35px;
   
@@ -1060,29 +1090,56 @@ img {
 }
 
 .subscription__form {
-  margin-top: 36px;
+  height: 100px;
+  margin-top: 35px;
   margin-left: 20px;
 }
 
 .subscription__form input {
   width: 368px;
-/*  height: 42px;*/
   padding-left: 14px;
   padding-top: 9px;
   padding-bottom: 9px;
   box-sizing: border-box;
   
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
-  color: rgb(153,153,153);
+  color: rgb(50,50,50);
   
   border-radius: 5px;
   border: 1px solid rgb(211,211,210);    
 }
 
+.subscription__form input:hover {
+  border: 2px solid rgb(154,154,154);
+  padding-left: 13px;
+  padding-top: 8px;
+}
+
+.subscription__form input:focus {
+  border: 2px solid rgba(46,136,228,0.52);
+  padding-left: 13px;
+  padding-top: 8px;
+}
+
+.subscription__form input::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(153,153,153); 
+}
+
+.subscription__form input:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(153,153,153); 
+}
+
 .subsctiption-btn {
-  margin-left: 8px;
+  
+  margin-left: 9px;
   padding-top: 9px;
   padding-left: 18px;
   padding-right: 18px;
@@ -1226,6 +1283,7 @@ img {
   display: none;
   
   background-color: rgba(0,0,0,0.3);
+  z-index: 5;
 }
 
 .feedback-form__wrapper {
@@ -1245,6 +1303,7 @@ img {
 }
 
 .feedback-form b {
+  margin-left: -1px;
   font-size: 24px;
   font-weight: 500;
   line-height: 28px;
@@ -1265,23 +1324,58 @@ img {
   padding-left: 13px;
   
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
-  color: rgb(153,153,153);
+  color: rgb(50,50,50);
   
   border-radius: 5px;
   border: 1px solid rgb(211,211,210);   
 }
 
+.feedback-form input[type="text"]:hover,
+.feedback-form input[type="email"]:hover,
+.feedback-form__content textarea:hover {
+  border: 2px solid rgb(154,154,154);
+  padding-left: 12px;
+}
+
+.feedback-form input[type="text"]:focus,
+.feedback-form input[type="email"]:focus,
+.feedback-form__content textarea:focus {
+  border: 2px solid rgba(46,136,228,0.52);
+  padding-left: 12px;
+}
+
+.feedback-form__content textarea:hover,
+.feedback-form__content textarea:focus {
+  padding-top: 7px; 
+}
+
+.feedback-form input[type="text"]::-webkit-input-placeholder,
+.feedback-form input[type="email"]::-webkit-input-placeholder,
+.feedback-form__content textarea::-webkit-input-placeholder {
+  font-weight: 400;
+  color: rgb(153,153,153); 
+}
+
+.feedback-form input[type="text"]:-ms-input-placeholder,
+.feedback-form input[type="email"]:-ms-input-placeholder,
+.feedback-form__content textarea:-ms-input-placeholder {
+  font-weight: 400;
+  color: rgb(153,153,153);
+}
+
 .feedback-form__content textarea {
+  box-sizing: border-box;
+  height: 155px;
   padding-top: 8px;
   padding-left: 13px;
   padding-right: 12px;
   
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
-  color: rgb(153,153,153);
+  color: rgb(50,50,50);
   
   border-radius: 5px;
   border: 1px solid rgb(211,211,210);
