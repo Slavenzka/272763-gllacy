@@ -172,6 +172,7 @@ img {
   padding: 0 27px;
   margin: 0 auto;
   box-sizing: border-box;
+  position: relative;
 }
 
 .header-main {
@@ -384,7 +385,7 @@ img {
 }
 
 .navigation-user__item:not(:last-of-type):hover > span,
-.cart-fill:hover > span {
+.cart-fill > span {
   color: rgb(50,50,50);
   
   background-color: rgb(248,247,244);
@@ -413,7 +414,7 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  width: 341px;
+  width: 60px;
   height: 121px;
   
   display: none;
@@ -425,9 +426,11 @@ img {
 }
 
 .navigation-user__search-area {
-  width: 100%;
+  width: 341px;
   height: 84px;
-  margin-top: 36px;
+  position: absolute;
+  top: 36px;
+  right: 0;
   
   background-color: rgb(248,247,244);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -1467,9 +1470,8 @@ img {
 .navigation-user__item-cart {
   display: inline-block;
   width: 117px;
-  
   box-sizing: border-box;
-  padding: 8px 34px 8px 45px;
+  padding: 8px 0px 8px 44px;
   margin-left: 10px;
   border-radius: 25px;
 }
@@ -1501,12 +1503,12 @@ img {
   display: block; 
 }
 
-.cart-fill:hover path,
-.cart-fill:hover circle {
+.cart-fill path,
+.cart-fill circle {
   fill: rgb(52,52,52); 
 }
 
-.cart-fill:hover polygon {
+.cart-fill polygon {
   fill: rgb(232,77,55); 
 }
 
@@ -1630,14 +1632,36 @@ img {
 }
 
 .breadcrumbs {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  left: 27px;
+  top: -20px;
+  
   font-size: 14px;
   line-height: 16px;
   
   list-style: none;
 }
 
+.breadcrumbs__item {
+  position: relative; 
+}
+
+.breadcrumbs__item:not(:last-of-type) {
+  margin-right: 21px;   
+}
+
 .breadcrumbs__item:not(:last-of-type) a {
-  border-bottom: 1px solid rgba(255,255,255,0.2)
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.breadcrumbs__item:not(:first-of-type)::before {
+  content: "\00bb";
+  position: absolute;
+  top: 0;
+  left: -14px;
 }
 
 .breadcrumbs__item:hover:not(:last-of-type) a, 
@@ -1646,6 +1670,31 @@ img {
 .catalog__item-link:active {
   color: rgb(255,188,158);
   border-bottom: 1px solid rgba(255,188,158,0.3)
+}
+
+.catalog-item-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 2px;
+  
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
+.catalog-filter {
+  background-color: rgba(0,0,0,0.3) 
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 860px;
+}
+
+.filter__item {
+  border: 0; 
 }
 
 .filter__item legend {
