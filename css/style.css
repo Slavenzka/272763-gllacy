@@ -1681,10 +1681,6 @@ img {
   line-height: 41px;
 }
 
-.catalog-filter {
-  background-color: rgba(0,0,0,0.3);
-}
-
 .filter {
   margin: 0;
   padding: 0;
@@ -1693,7 +1689,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
-  width: 860px;
+  width: 870px;
 }
 
 .filter__item {
@@ -1769,9 +1765,15 @@ img {
   pointer-events: none;
 }
 
-.filter__item:first-of-type:hover select{
+.filter__item:first-of-type select:hover {
   font-weight: 500;
   color: rgb(50,50,50);
+}
+
+.filter__item:first-of-type select:active,
+.filter__item:first-of-type:hover select
+{
+  background-color: white;
 }
 
 .filter__item:first-of-type:hover .sort-list::before {
@@ -1872,10 +1874,178 @@ input[type="range"]::before {
 
 /*Фильтр жирности - начало*/
 
+.filter__item:nth-of-type(3) {
+  margin-left: 35px;
+  position: relative;
+}
+
+.filter__item:nth-of-type(3) legend {
+  margin-bottom: 14px;
+}
+
+.filter__item:nth-of-type(3) input[type="radio"] {
+  display: none;
+}
+
+.filter__item:nth-of-type(3) label {
+  margin-left: 46px;
+  position: relative;
+}
+
+.filter__item:nth-of-type(3) label:last-of-type {
+  margin-left: 45px;
+  position: relative;
+}
+
+.filter__item:nth-of-type(3) label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -31px;
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(255,255,255,0.8);
+  border-radius: 50%;
+}
+
+.filter__item:nth-of-type(3) label:hover::before {
+  border: 3px solid rgba(255,255,255,1);
+}
+
+.filter__item:nth-of-type(3) label:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -24px;
+  box-sizing: border-box;
+  width: 0px;
+  height: 0px;
+  border: 4px solid rgba(255,255,255,0.8);
+  border-radius: 50%;
+}
+
+.filter__item:nth-of-type(3) label:nth-of-type(2):hover::after {
+  border: 4px solid rgba(255,255,255,1);
+}
+
+.filter__item:nth-of-type(3)::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 1px;
+  width: 415px;
+  height: 36px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 18px;  
+}
+
 /*Фильтр жирности - конец*/
 
+/*Выбор наполнителей - начало*/
+
+.filter__item:nth-of-type(4) {
+  margin-top: 16px;
+  padding-bottom: 7px;
+  
+  position: relative;
+}
+
+.filter__item:nth-of-type(4) input[type="checkbox"] {
+  display: none;
+}
+
+.filter__item:nth-of-type(4) legend {
+  margin-bottom: 13px;
+}
+
+.filter__item:nth-of-type(4) label {
+  position: relative;
+}
+
+.filter__item:nth-of-type(4) label:first-of-type,
+.filter__item:nth-of-type(4) label:nth-of-type(2){
+  margin-left: 16px;
+  padding-left: 32px;
+}
+
+.filter__item:nth-of-type(4) label:first-of-type::before,
+.filter__item:nth-of-type(4) label:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 20px;
+  top: 0px;
+  left: -2px;
+  
+  background-image: url("../img/filter-checkbox-on.svg");
+}
+
+.filter__item:nth-of-type(4) label:first-of-type:hover::before,
+.filter__item:nth-of-type(4) label:nth-of-type(2):hover::before {
+  background-image: url("../img/filter-checkbox-on-hover.svg");
+}
+
+.filter__item:nth-of-type(4) label:nth-of-type(3) {
+  margin-left: 17px;
+  padding-left: 32px;
+}
+
+.filter__item:nth-of-type(4) label:nth-of-type(4) {
+  margin-left: 19px;
+  padding-left: 32px;
+}
+
+.filter__item:nth-of-type(4) label:nth-of-type(5) {
+  margin-left: 18px;
+  padding-left: 32px;
+}
+
+.filter__item:nth-of-type(4) label:nth-of-type(3)::before,
+.filter__item:nth-of-type(4) label:nth-of-type(4)::before,
+.filter__item:nth-of-type(4) label:nth-of-type(5)::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0px;
+  left: -1px;
+  
+  border: 2px solid rgba(255,255,255,0.8);
+  border-radius: 2px;
+}
+
+.filter__item:nth-of-type(4) label:nth-of-type(4)::before {
+  left: 1px; 
+}
+
+.filter__item:nth-of-type(4) label:nth-of-type(3):hover::before,
+.filter__item:nth-of-type(4) label:nth-of-type(4):hover::before,
+.filter__item:nth-of-type(4) label:nth-of-type(5):hover::before {
+  border: 2px solid rgba(255,255,255,1);  
+}
+
+.filter__item:nth-of-type(4):before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left:0px;
+  width: 702px;
+  height: 36px;
+  
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 18px;
+}
+
+/*Выбор наполнителей - конец*/
+
 .filter__btn {
+  display: block;
   padding: 0;
+  padding: 0px 27px 0 27px;;
+  margin-top: 38px;
+  margin-left: 32px;
+  height: 36px;
   
   font-weight: 500;
   line-height: 18px;
@@ -1883,19 +2053,24 @@ input[type="range"]::before {
   
   background-color: rgb(166,183,174);
   border: 2px solid rgb(255,255,255);
+  border-radius: 18px;
 }
 
 .filter__btn:hover {
   color: rgb(50,50,50);
   
-  background-color: rgb(251,252,251); 
+  background-color: rgb(255,255,255);
+  border: 2px solid rgb(255,255,255);
 }
 
-.filter__btn:hover {
+.filter__btn:active {
   color: rgb(50,50,50);
   
-  background-color: rgb(234,234,234);
-  border: 2px solid rgb(234,234,234);
+  background-color: rgb(237,237,237);
+  border: 2px solid rgb(237,237,237);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1); 
+  
+  
 }
 
 .catalog {
