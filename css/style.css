@@ -246,7 +246,7 @@ img {
 
 .navigation-catalog__wrapper {
   background-color: transparent;
-  height: 171px;
+  min-height: 171px;
   width: 143px;
   position: absolute;
   left: -7px;
@@ -1664,9 +1664,7 @@ img {
 }
 
 .breadcrumbs__item:hover:not(:last-of-type) a, 
-.breadcrumbs__item:active:not(:last-of-type) a,
-.catalog__item-link:hover,
-.catalog__item-link:active {
+.breadcrumbs__item:active:not(:last-of-type) a {
   color: rgb(255,188,158);
   border-bottom: 1px solid rgba(255,188,158,0.3)
 }
@@ -1717,10 +1715,12 @@ img {
 
 .filter__item select {
   box-sizing: border-box;
-  width: 193px;
+  width: 191px;
   height: 36px;
   margin-top: 6px;
-  padding: 0px 0px 0px 11px;
+  margin-left: -2px;
+  padding: 0px 0px 0px 13px;
+  box-sizing: border-box;
   
   font-size: 16px;
   line-height: 18px;
@@ -1784,90 +1784,59 @@ img {
 
 /*Ползунок - начало*/
 
-input[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-
-input[type=range]:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-}
-
-input[type=range]::-ms-track {
-  width: 100%;
-  cursor: pointer;
-
-  /* Hides the slider so custom styles can be added */
-  background: transparent; 
-  border-color: transparent;
-  color: transparent;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
-  background-color: rgb(171,171,171);
-  border-radius: 50%;
-  border: 8px solid rgb(255,255,255);
-  cursor: pointer;
-  margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-}
-
-input[type=range]::-moz-range-thumb {
-  height: 20px;
-  width: 20px;
-  background-color: rgb(171,171,171);
-  border-radius: 50%;
-  border: 8px solid rgb(255,255,255);
-  cursor: pointer;
-  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-}
-
-input[type=range]::-ms-thumb {
-  height: 20px;
-  width: 20px;
-  background-color: rgb(171,171,171);
-  border-radius: 50%;
-  border: 8px solid rgb(255,255,255);
-  cursor: pointer;
-  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 4px;
-  cursor: pointer;
-  background: rgba(248,247,244,0.5);
-}
-
-.filter__item:nth-of-type(2) {
+.filter__item:nth-of-type(2) legend {
   margin-left: 15px;
 }
 
-.filter__item:nth-of-type(2) input[type="range"] {
-  margin: 0;
-  padding: 0;
-  margin-top: 22px;
-  margin-left: 19px;
-  width: 176px;
+.filter-range__controls {
+  margin-top: 6px;
+  margin-left: 16px;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-left: 22px;
+  width: 219px;
+  height: 36px;
+  box-sizing: border-box;
   position: relative;
+  
+  background-color: rgba(255,255,255,0.2);
+  
+  border-radius: 18px;
 }
 
-input[type="range"]::before {
-  content: "";
+.filter-range__scale { 
+  height: 4px;
+
+  background: rgba(248,247,244,0.5); 
+}
+
+.filter-range__scale-bar {
+  height: 4px;
+  width: 100px;
+  margin-left: 23px;
+  
+  background: rgba(248,247,244,1);
+}
+
+.filter-range__toggle { 
+  height: 20px;
+  width: 20px;
+  background-color: rgb(171,171,171);
+  border-radius: 50%;
+  border: 8px solid rgb(255,255,255);
+  cursor: pointer;
+  box-sizing: border-box;
   position: absolute;
-  top: -16px;
-  left: -22px;
-  width: 220px;
-  height: 36px;
-  background-color: rgba(255,255,255,0.2);
-  border-radius: 18px;
+}
+
+.filter-range__toggle-min {
+  top: 8px;
+  left: 35px;
+}
+
+.filter-range__toggle-max {
+  top: 8px;
+  left: 133px;
 }
 
 /*Ползунок - конец*/
@@ -1875,7 +1844,7 @@ input[type="range"]::before {
 /*Фильтр жирности - начало*/
 
 .filter__item:nth-of-type(3) {
-  margin-left: 35px;
+  margin-left: 14px;
   position: relative;
 }
 
@@ -2039,6 +2008,8 @@ input[type="range"]::before {
 
 /*Выбор наполнителей - конец*/
 
+/*Кнопка фильтра - начало*/
+
 .filter__btn {
   display: block;
   padding: 0;
@@ -2069,17 +2040,131 @@ input[type="range"]::before {
   background-color: rgb(237,237,237);
   border: 2px solid rgb(237,237,237);
   box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1); 
-  
-  
 }
 
+/*Кнопка фильтра - конец*/
+
+/*Стилизация каталога - начало*/
+
 .catalog {
+  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  
   list-style: none;
 }
 
+.catalog__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  margin-bottom: 38px;
+}
+
 .catalog__item-link {
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  margin-top: 13px;
+  max-width: 256px;
+  
+  text-align: center;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  
+  position: relative;
+  z-index: 4;
+}
+
+.catalog__item-link span {
+   border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.catalog__item-link:hover span,
+.catalog__item-link:active span {
+  color: rgb(255,188,158);
+  border-bottom: 1px solid rgba(255,188,158,0.3)
+}
+
+.catalog__item-pic {
+  width: 267px;
+  height: 267px;
+  border-radius: 50%;
+  
+  position: relative;
+  z-index: 2;
+}
+
+.catalog__item-price {
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+  position: absolute;
+  top: 210px;
+  
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+  
+  z-index: 2;
+}
+
+.catalog__item-price,
+.catalog__item-price span {
+  text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);  
+}
+
+.catalog__item-price span {
+  margin-left: 36px;
+  font-size: 30px;
+}
+
+.catalog__item-price svg {
+  position: absolute;
+  width: 31px;
+  height: 36px;
+  top: 5px;
+  left: 80px;
+}
+
+.svg-shadow {
+  filter: drop-shadow(1px 1px 3px rgba(49, 50, 53, 0.5));
+}
+
+.catalog__item-background {
+  position: absolute;
+  width: 293px;
+  height: 405px;
+  top: -6px;
+  left: -13px;
+  display: none;
+  
+  background: rgba(255,255,255,0.2);
+  z-index: 1;
+}
+
+.catalog__item:hover .catalog__item-background {
+  display: block;
+  z-index:3;
+} 
+
+.catalog__item:hover .catalog__item-pic,
+.catalog__item:hover .catalog__item-price{
+  z-index: 4; 
+}
+
+.catalog__item-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 340px;
+  padding: 10px 17px;
+  
+  border-radius: 18px / 21px;
 }
 
 .catalog__item-price {
@@ -2088,28 +2173,93 @@ input[type="range"]::before {
   line-height: 45px;
 }
 
-.catalog__item-price span {
-  font-size: 30px;
-}
-  
+/*Стилизация каталога - конец*/
+
+/*Пагинатор - начало*/
+
 .pagination {
+  margin: 0;
+  margin-top: 43px;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 55px;
+  
   list-style: none;
+  
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.pagination__item {
+  text-align: center;
 }
 
 .pagination__item a {
+  padding-top: 5px;
+  display: inline-block;
+  
+  width: 27px;
+  height: 26px;
+  box-sizing: border-box;
+  
   font-weight: 500;
   line-height: 18px;
   
-  color: rgb(50,50,50);  
+  color: rgb(255,255,255);
+  border-radius: 50%;
 }
 
-.pagination__item:first-of-type a {
+.pagination__item:first-child {
+  margin-right: 14px;
+  margin-bottom: 30px;
+}
+
+.pagination__item:first-child svg {
+  transform: rotate(180deg); 
+}
+
+.pagination__item:first-child path {
+  fill: rgba(193,198,206,0.2); 
+}
+
+.pagination__item:last-child {
+  margin-left: 16px; 
+  margin-bottom: 30px;
+}
+
+.pagination__item:last-child svg path {
+  fill: rgba(193,198,206,1);
+}
+
+.pagination__item:first-child,
+.pagination__item:last-child,
+.pagination__item:first-child a,
+.pagination__item:last-child a {
+  width: 8px;
+}
+
+.pagination__item:not(.page-rotator) {
+  margin-left: 2px;   
+}
+
+.actual-page a {
+  color: rgb(50,50,50);
+  
   background-color: rgb(255,255,255);
 }
 
-.pagination__item:hover:not(:first-of-type) a {
-  background-color: rgb(157,177,165);
+.selectable-page a:hover {
+  background-color: rgba(255,255,255,0.2);  
 }
+
+.selectable-page a:active {
+  color: rgb(50,50,50);
+  
+  background-color: rgb(255,255,255);  
+}
+
+/*Пагинатор - конец*/
 
 /*Футер*/
 
@@ -2204,15 +2354,6 @@ social__link:active {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-}
-
-.creator-info b::before {
-  content: "";
-  position: absolute;
-  top: -45px;
-  left: 0;
-  width: 108px;
-  height: 38px;
 }
 
 .creator-info svg {

@@ -21,7 +21,7 @@
               <div class="navigation-catalog__wrapper">
                 <ul class="navigation-catalog">
                   <li class="navigation-catalog__item" ><a href="#">Новинки</a></li>
-                  <li class="navigation-catalog__border" ></li>
+                  <li class="navigation-catalog__item navigation-catalog__border"></li>
                   <li class="navigation-catalog__item" ><a href="#">Сливочное</a></li>
                   <li class="navigation-catalog__item"><a href="#">Щербеты</a></li>
                   <li class="navigation-catalog__item" ><a href="#">Фруктовый лед</a></li>
@@ -155,8 +155,15 @@
             </fieldset>
             <fieldset class="filter__item">
               <legend>Цена: 100 руб. - 500 руб.</legend>
-              <label class="visually-hidden" for="item-range">Цена: 100&nbsp;руб. &mdash;&nbsp;500&nbsp;руб.</label>
-              <input type="range" name="filter__item-range" id="item-range" min="100" max="500" step="25">
+              <div class="filter-range">
+                <div class="filter-range__controls">
+                  <div class="filter-range__scale">
+                    <div class="filter-range__scale-bar"></div>
+                  </div>
+                  <div class="filter-range__toggle filter-range__toggle-min"></div>
+                  <div class="filter-range__toggle filter-range__toggle-max"></div>
+                </div>
+              </div>
             </fieldset>
             <fieldset class="filter__item">
               <legend>Жирность:</legend>
@@ -192,95 +199,209 @@
             <!--Товар 1-->
             <li class="catalog__item">
               <img class="catalog__item-pic" src="img/catalog-list-item-1.jpg" width="267" height="267" alt="Апельсиновое мороженое">
-              <p class="catalog__item-price">310 Р<span>/кг</span></p>
-              <a class="catalog__item-link" href="#">Сливочное с&nbsp;апельсиновым джемом и&nbsp;цитрусовой стружкой</a>
-              <button class="btn catalog__item-btn">Быстрый просмотр</button>
+              <p class="catalog__item-price">310<span>/кг</span>
+                <svg class="svg-shadow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="31px" height="36px" viewBox="0 0 31 36" enable-background="new 0 0 31 36" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M11,21h7.451c5.247,0,9.5-4.253,9.5-9.5S23.698,2,18.451,2H11H7.379H6v14H2v5h4v3H2v5h4v4h5
+    v-4h15v-5H11V21z M11,7h7.451V6.97c2.501,0,4.529,2.028,4.529,4.53s-2.028,4.53-4.529,4.53V16H11V7z"/>
+                </svg>
+              </p>
+              <a class="catalog__item-link" href="#"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+                <div class="catalog__item-background">
+                  <button class="btn catalog__item-btn">Быстрый просмотр</button>
+                </div>              
             </li>
             <!--Товар 2-->
             <li class="catalog__item">
               <img class="catalog__item-pic" src="img/catalog-list-item-2.jpg" width="267" height="267" alt="Кофейное мороженое">
-              <p class="catalog__item-price">380 Р<span>/кг</span></p>
-              <a class="catalog__item-link" href="#">Сливочно-кофейное с&nbsp;кусочками шоколада</a>
-              <button class="btn catalog__item-btn">Быстрый просмотр</button>
+              <p class="catalog__item-price">380<span>/кг</span>
+                <svg class="svg-shadow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="31px" height="36px" viewBox="0 0 31 36" enable-background="new 0 0 31 36" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M11,21h7.451c5.247,0,9.5-4.253,9.5-9.5S23.698,2,18.451,2H11H7.379H6v14H2v5h4v3H2v5h4v4h5
+    v-4h15v-5H11V21z M11,7h7.451V6.97c2.501,0,4.529,2.028,4.529,4.53s-2.028,4.53-4.529,4.53V16H11V7z"/>
+                </svg>
+              </p>
+              <a class="catalog__item-link" href="#"><span>Сливочно-кофейное с кусочками шоколада</span></a>
+                <div class="catalog__item-background">
+                  <button class="btn catalog__item-btn">Быстрый просмотр</button>
+                </div>
             </li>
             <!--Товар 3-->
             <li class="catalog__item">
               <img class="catalog__item-pic" src="img/catalog-list-item-3.jpg" width="267" height="267" alt="Клубничное мороженое">
-              <p class="catalog__item-price">355 Р<span>/кг</span></p>
-              <a class="catalog__item-link" href="#">Сливочно-клубничное с&nbsp;присыпкой из&nbsp;белого шоколада</a>
-              <button class="btn catalog__item-btn">Быстрый просмотр</button>
+              <p class="catalog__item-price">355<span>/кг</span>
+                <svg class="svg-shadow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="31px" height="36px" viewBox="0 0 31 36" enable-background="new 0 0 31 36" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M11,21h7.451c5.247,0,9.5-4.253,9.5-9.5S23.698,2,18.451,2H11H7.379H6v14H2v5h4v3H2v5h4v4h5
+    v-4h15v-5H11V21z M11,7h7.451V6.97c2.501,0,4.529,2.028,4.529,4.53s-2.028,4.53-4.529,4.53V16H11V7z"/>
+                </svg>
+              </p>
+              <a class="catalog__item-link" href="#"><span>Сливочно-клубничное с присыпкой из&nbsp;белого шоколада</span></a>
+                <div class="catalog__item-background">
+                  <button class="btn catalog__item-btn">Быстрый просмотр</button>
+                </div>
             </li>
             <!--Товар 4-->
             <li class="catalog__item">
               <img class="catalog__item-pic" src="img/catalog-list-item-4.jpg" width="267" height="267" alt="Мороженое крем-брюле">
-              <p class="catalog__item-price">415 Р<span>/кг</span></p>
-              <a class="catalog__item-link" href="#">Сливочное крем-брюле с&nbsp;карамельной подливкой</a>
-              <button class="btn catalog__item-btn">Быстрый просмотр</button>
+              <p class="catalog__item-price">415<span>/кг</span>
+                <svg class="svg-shadow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="31px" height="36px" viewBox="0 0 31 36" enable-background="new 0 0 31 36" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M11,21h7.451c5.247,0,9.5-4.253,9.5-9.5S23.698,2,18.451,2H11H7.379H6v14H2v5h4v3H2v5h4v4h5
+    v-4h15v-5H11V21z M11,7h7.451V6.97c2.501,0,4.529,2.028,4.529,4.53s-2.028,4.53-4.529,4.53V16H11V7z"/>
+                </svg>
+              </p>
+              <a class="catalog__item-link" href="#"><span>Сливочное крем-брюле с карамельной подливкой</span></a>
+                <div class="catalog__item-background">
+                  <button class="btn catalog__item-btn">Быстрый просмотр</button>
+                </div>
             </li>
             <!--Товар 5-->
             <li class="catalog__item">
               <img class="catalog__item-pic" src="img/catalog-list-item-5.jpg" width="267" height="267" alt="Мороженое с брусничным джемом">
-              <p class="catalog__item-price">325 Р<span>/кг</span></p>
-              <a class="catalog__item-link" href="#">Сливочное с&nbsp;брусничным джемом</a>
-              <button class="btn catalog__item-btn">Быстрый просмотр</button>
+              <p class="catalog__item-price">325<span>/кг</span>
+                <svg class="svg-shadow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="31px" height="36px" viewBox="0 0 31 36" enable-background="new 0 0 31 36" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M11,21h7.451c5.247,0,9.5-4.253,9.5-9.5S23.698,2,18.451,2H11H7.379H6v14H2v5h4v3H2v5h4v4h5
+    v-4h15v-5H11V21z M11,7h7.451V6.97c2.501,0,4.529,2.028,4.529,4.53s-2.028,4.53-4.529,4.53V16H11V7z"/>
+                </svg>
+              </p>
+              <a class="catalog__item-link" href="#"><span>Сливочное с&nbsp;брусничным джемом</span></a>
+                <div class="catalog__item-background">
+                  <button class="btn catalog__item-btn">Быстрый просмотр</button>
+                </div>
             </li>
             <!--Товар 6-->
             <li class="catalog__item">
               <img class="catalog__item-pic" src="img/catalog-list-item-6.jpg" width="267" height="267" alt="Сливочно-черничное мороженое">
-              <p class="catalog__item-price">410 Р<span>/кг</span></p>
-              <a class="catalog__item-link" href="#">Сливочно-черничное с&nbsp;цельными ягодами черники</a>
-              <button class="btn catalog__item-btn">Быстрый просмотр</button>
+              <p class="catalog__item-price">410<span>/кг</span>
+                <svg class="svg-shadow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="31px" height="36px" viewBox="0 0 31 36" enable-background="new 0 0 31 36" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M11,21h7.451c5.247,0,9.5-4.253,9.5-9.5S23.698,2,18.451,2H11H7.379H6v14H2v5h4v3H2v5h4v4h5
+    v-4h15v-5H11V21z M11,7h7.451V6.97c2.501,0,4.529,2.028,4.529,4.53s-2.028,4.53-4.529,4.53V16H11V7z"/>
+                </svg>
+              </p>
+              <a class="catalog__item-link" href="#"><span>Сливочно-черничное с цельными ягодами черники</span></a>
+                <div class="catalog__item-background">
+                  <button class="btn catalog__item-btn">Быстрый просмотр</button>
+                </div>
             </li>
             <!--Товар 7-->
             <li class="catalog__item">
               <img class="catalog__item-pic" src="img/catalog-list-item-7.jpg" width="267" height="267" alt="Сливочно-лимонное мороженое">
-              <p class="catalog__item-price">375 Р<span>/кг</span></p>
-              <a class="catalog__item-link" href="#">Сливочно-лимонное с&nbsp;карамельной присыпкой</a>
-              <button class="btn catalog__item-btn">Быстрый просмотр</button>
+              <p class="catalog__item-price">375<span>/кг</span>
+                <svg class="svg-shadow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="31px" height="36px" viewBox="0 0 31 36" enable-background="new 0 0 31 36" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M11,21h7.451c5.247,0,9.5-4.253,9.5-9.5S23.698,2,18.451,2H11H7.379H6v14H2v5h4v3H2v5h4v4h5
+    v-4h15v-5H11V21z M11,7h7.451V6.97c2.501,0,4.529,2.028,4.529,4.53s-2.028,4.53-4.529,4.53V16H11V7z"/>
+                </svg>
+              </p>
+              <a class="catalog__item-link" href="#"><span>Сливочно-лимонное с карамельной присыпкой</span></a>
+                <div class="catalog__item-background">
+                  <button class="btn catalog__item-btn">Быстрый просмотр</button>
+                </div>
             </li>
             <!--Товар 8-->
             <li class="catalog__item">
               <img class="catalog__item-pic" src="img/catalog-list-item-8.jpg" width="267" height="267" alt="Сливочное мороженое">
-              <p class="catalog__item-price">320 Р<span>/кг</span></p>
-              <a class="catalog__item-link" href="#">Сливочное с&nbsp;шоколадной стружкой</a>
-              <button class="btn catalog__item-btn">Быстрый просмотр</button>
+              <p class="catalog__item-price">320<span>/кг</span>
+                <svg class="svg-shadow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="31px" height="36px" viewBox="0 0 31 36" enable-background="new 0 0 31 36" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M11,21h7.451c5.247,0,9.5-4.253,9.5-9.5S23.698,2,18.451,2H11H7.379H6v14H2v5h4v3H2v5h4v4h5
+    v-4h15v-5H11V21z M11,7h7.451V6.97c2.501,0,4.529,2.028,4.529,4.53s-2.028,4.53-4.529,4.53V16H11V7z"/>
+                </svg>
+              </p>
+              <a class="catalog__item-link" href="#"><span>Сливочное с&nbsp;шоколадной стружкой</span></a>
+                <div class="catalog__item-background">
+                  <button class="btn catalog__item-btn">Быстрый просмотр</button>
+                </div>
             </li>
             <!--Товар 9-->
             <li class="catalog__item">
               <img class="catalog__item-pic" src="img/catalog-list-item-9.jpg" width="267" height="267" alt="Сливочно-ванильное мороженое">
-              <p class="catalog__item-price">440 Р<span>/кг</span></p>
-              <a class="catalog__item-link" href="#">Сливочно-ванильное с&nbsp;кусочками шоколада</a>
-              <button class="btn catalog__item-btn">Быстрый просмотр</button>
+              <p class="catalog__item-price">440<span>/кг</span>
+                <svg class="svg-shadow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="31px" height="36px" viewBox="0 0 31 36" enable-background="new 0 0 31 36" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M11,21h7.451c5.247,0,9.5-4.253,9.5-9.5S23.698,2,18.451,2H11H7.379H6v14H2v5h4v3H2v5h4v4h5
+    v-4h15v-5H11V21z M11,7h7.451V6.97c2.501,0,4.529,2.028,4.529,4.53s-2.028,4.53-4.529,4.53V16H11V7z"/>
+                </svg>
+              </p>
+              <a class="catalog__item-link" href="#"><span>Сливочно-ванильное с кусочками шоколада</span></a>
+                <div class="catalog__item-background">
+                  <button class="btn catalog__item-btn">Быстрый просмотр</button>
+                </div>
             </li>
             <!--Товар 10-->
             <li class="catalog__item">
               <img class="catalog__item-pic" src="img/catalog-list-item-10.jpg" width="267" height="267" alt="Сливочное мороженое с ментоловым сиропом">
-              <p class="catalog__item-price">435 Р<span>/кг</span></p>
-              <a class="catalog__item-link" href="#">Сливочное с&nbsp;ментоловым сиропом</a>
-              <button class="btn catalog__item-btn">Быстрый просмотр</button>
+              <p class="catalog__item-price">435<span>/кг</span>
+                <svg class="svg-shadow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="31px" height="36px" viewBox="0 0 31 36" enable-background="new 0 0 31 36" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M11,21h7.451c5.247,0,9.5-4.253,9.5-9.5S23.698,2,18.451,2H11H7.379H6v14H2v5h4v3H2v5h4v4h5
+    v-4h15v-5H11V21z M11,7h7.451V6.97c2.501,0,4.529,2.028,4.529,4.53s-2.028,4.53-4.529,4.53V16H11V7z"/>
+                </svg>
+              </p>
+              <a class="catalog__item-link" href="#"><span>Сливочное с&nbsp;ментоловым сиропом</span></a>
+                <div class="catalog__item-background">
+                  <button class="btn catalog__item-btn">Быстрый просмотр</button>
+                </div>
             </li>
             <!--Товар 11-->
             <li class="catalog__item">
               <img class="catalog__item-pic" src="img/catalog-list-item-11.jpg" width="267" height="267" alt="Сливочное мороженое с шоколадом">
-              <p class="catalog__item-price">355 Р<span>/кг</span></p>
-              <a class="catalog__item-link" href="#">Сливочное с&nbsp;кусочками черного шоколада</a>
-              <button class="btn catalog__item-btn">Быстрый просмотр</button>
+              <p class="catalog__item-price">355<span>/кг</span>
+                <svg class="svg-shadow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="31px" height="36px" viewBox="0 0 31 36" enable-background="new 0 0 31 36" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M11,21h7.451c5.247,0,9.5-4.253,9.5-9.5S23.698,2,18.451,2H11H7.379H6v14H2v5h4v3H2v5h4v4h5
+    v-4h15v-5H11V21z M11,7h7.451V6.97c2.501,0,4.529,2.028,4.529,4.53s-2.028,4.53-4.529,4.53V16H11V7z"/>
+                </svg>
+              </p>
+              <a class="catalog__item-link" href="#"><span>Сливочное с&nbsp;кусочками черного шоколада</span></a>
+                <div class="catalog__item-background">
+                  <button class="btn catalog__item-btn">Быстрый просмотр</button>
+                </div>
             </li>
             <!--Товар 12-->
             <li class="catalog__item">
               <img class="catalog__item-pic" src="img/catalog-list-item-12.jpg" width="267" height="267" alt="Сливочно мороженое с мятным сиропом">
-              <p class="catalog__item-price">420 Р<span>/кг</span></p>
-              <a class="catalog__item-link" href="#">Сливочное с&nbsp;мятным сиропом</a>
-              <button class="btn catalog__item-btn">Быстрый просмотр</button>
+              <p class="catalog__item-price">420<span>/кг</span>
+                <svg class="svg-shadow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="31px" height="36px" viewBox="0 0 31 36" enable-background="new 0 0 31 36" xml:space="preserve">
+                  <path fill="#FFFFFF" d="M11,21h7.451c5.247,0,9.5-4.253,9.5-9.5S23.698,2,18.451,2H11H7.379H6v14H2v5h4v3H2v5h4v4h5
+    v-4h15v-5H11V21z M11,7h7.451V6.97c2.501,0,4.529,2.028,4.529,4.53s-2.028,4.53-4.529,4.53V16H11V7z"/>
+                </svg>
+              </p>
+              <a class="catalog__item-link" href="#"><span>Сливочное с&nbsp;мятным сиропом</span></a>
+                <div class="catalog__item-background">
+                  <button class="btn catalog__item-btn">Быстрый просмотр</button>
+                </div>
             </li>
           </ul>
           <ul class="pagination">
-            <li class="pagination__item"><a>1</a></li>
-            <li class="pagination__item"><a href="#">2</a></li>
-            <li class="pagination__item"><a href="#">3</a></li>
-            <li class="pagination__item"><a href="#">4</a></li>
-            <li class="pagination__item"><a href="#">5</a></li>
-            <li class="pagination__item"><a href="#">></a></li>  
+            <li class="pagination__item">
+              <a>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="8px" height="12px" viewBox="0 0 8 12" enable-background="new 0 0 8 12" xml:space="preserve">
+                  <path fill="#C1C6CE" d="M7.237,5.642L1.729,0.133c-0.198-0.198-0.519-0.198-0.716,0s-0.198,0.519,0,0.716L6.163,6l-5.151,5.15c-0.198,0.198-0.198,0.519,0,0.717c0.099,0.099,0.229,0.148,0.358,0.148c0.129,0,0.259-0.05,0.358-0.148l5.509-5.509
+                  C7.436,6.16,7.436,5.84,7.237,5.642z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="pagination__item actual-page"><a>1</a></li>
+            <li class="pagination__item selectable-page"><a href="#">2</a></li>
+            <li class="pagination__item selectable-page"><a href="#">3</a></li>
+            <li class="pagination__item selectable-page"><a href="#">4</a></li>
+            <li class="pagination__item selectable-page"><a href="#">5</a></li>
+            <li class="pagination__item">
+              <a href="#">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="8px" height="12px" viewBox="0 0 8 12" enable-background="new 0 0 8 12" xml:space="preserve">
+                  <path fill="#C1C6CE" d="M7.237,5.642L1.729,0.133c-0.198-0.198-0.519-0.198-0.716,0s-0.198,0.519,0,0.716L6.163,6l-5.151,5.15
+                  c-0.198,0.198-0.198,0.519,0,0.717c0.099,0.099,0.229,0.148,0.358,0.148c0.129,0,0.259-0.05,0.358-0.148l5.509-5.509
+                  C7.436,6.16,7.436,5.84,7.237,5.642z"/>
+                </svg>
+              </a>
+            </li> 
           </ul>
         </section>
       </div>
@@ -367,7 +488,7 @@
             <li class="about__item"><a href="#">Экологические стандарты</a></li>
           </ul>
            <div class="creator-info">
-            <a href="#s">
+            <a href="#">
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" height="43px" viewBox="0 -4 120 45">
               <title>logo_name</title>
               <path d="M401.93,351.51a2.07,2.07,0,0,0,.58-0.11v1.4a3.41,3.41,0,0,1-1.24.22,1.75,1.75,0,0,1-1.75-1,5.08,5.08,0,0,1-3.3,1.13c-1.59,0-3.06-.87-3.06-2.68,0-2.24,2.08-2.93,3.9-2.93a11.63,11.63,0,0,1,2.28.26v-0.31c0-1.09-.8-1.86-2.3-1.86a7.79,7.79,0,0,0-3.15.67v-1.79a10.72,10.72,0,0,1,3.35-.58c2.48,0,4,1.18,4,3.83v3.14A0.57,0.57,0,0,0,401.93,351.51Zm-6.76-1.19a1.42,1.42,0,0,0,1.64,1.29,3.56,3.56,0,0,0,2.53-1V349.1a10.21,10.21,0,0,0-1.9-.22C396.34,348.89,395.17,349.23,395.17,350.33Z" transform="translate(-355.09 -323.29)" fill="#fff"/>
