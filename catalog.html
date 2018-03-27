@@ -145,15 +145,18 @@
           <form class="filter">
             <fieldset class="filter__item">
               <legend>Сортировка:</legend>
-              <label class="visually-hidden" for="item-sort">Сортировка:</label>
+              <label class="sort-list" for="item-sort">Сортировка:</label>
               <select name="filter__item-sort" id="item-sort">
-                <option value="1" selected>по популярности</option>
+                <option class="sort__option" value="1" selected>по популярности</option>
+                <option class="sort__option" value="2">сначала недорогие</option>
+                <option class="sort__option" value="3">сначала дорогие</option>
+                <option class="sort__option" value="4">по жирности</option>
               </select>
             </fieldset>
             <fieldset class="filter__item">
               <legend>Цена: 100 руб. - 500 руб.</legend>
-              <label class="visually-hidden" for="item-range">Цена: 100 руб. - 500 руб.</label>
-              <input type="range" name="filter__item-range" id="item-range" min="100" max="500" step="50">
+              <label class="visually-hidden" for="item-range">Цена: 100&nbsp;руб. &mdash;&nbsp;500&nbsp;руб.</label>
+              <input type="range" name="filter__item-range" id="item-range" min="100" max="500" step="25">
             </fieldset>
             <fieldset class="filter__item">
               <legend>Жирность:</legend>

@@ -75,7 +75,7 @@ body {
   margin: 0;
   padding: 0;
   
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -1024,7 +1024,6 @@ img {
   padding-left: 20px;
   padding-bottom: 81px;
   
-  background: red;
   background-image: url("../img/Background-strawberry.jpg");
   background-repeat: no-repeat;
   background-size: auto auto;
@@ -1683,10 +1682,14 @@ img {
 }
 
 .catalog-filter {
-  background-color: rgba(0,0,0,0.3) 
+  background-color: rgba(0,0,0,0.3);
 }
 
 .filter {
+  margin: 0;
+  padding: 0;
+  margin-top: 26px;
+  
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -1694,10 +1697,15 @@ img {
 }
 
 .filter__item {
+  margin: 0;
+  padding: 0;
+  
   border: 0; 
 }
 
 .filter__item legend {
+  padding-left: 16px;
+  
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -1708,6 +1716,163 @@ img {
   font-weight: 500;
   line-height: 18px;
 }
+
+/*Выпадающий список - начало*/
+
+.filter__item select {
+  box-sizing: border-box;
+  width: 193px;
+  height: 36px;
+  margin-top: 6px;
+  padding: 0px 0px 0px 11px;
+  
+  font-size: 16px;
+  line-height: 18px;
+  
+  color: rgb(255,255,255);
+  
+  border: none;
+  border-radius: 16px;
+  background-color: rgba(248,247,244,0.2);
+  -moz-appearance: window;
+  -webkit-appearance: none;
+}
+
+.sort__option {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgb(50,50,50);
+}
+
+.sort-list {
+  position: relative;
+  
+  font-size: 0;
+}
+
+.sort-list::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  right: -179px;
+  width: 11px;
+  height: 20px;
+  box-sizing: border-box;
+  
+  background-color: transparent;
+  border-top: 10px solid white;
+  border-left: 5px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 5px solid transparent;
+  
+  pointer-events: none;
+}
+
+.filter__item:first-of-type:hover select{
+  font-weight: 500;
+  color: rgb(50,50,50);
+}
+
+.filter__item:first-of-type:hover .sort-list::before {
+  border-top: 10px solid rgb(35,31,32); 
+}
+
+/*Выпадающий список - конец*/
+
+/*Ползунок - начало*/
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(171,171,171);
+  border-radius: 50%;
+  border: 8px solid rgb(255,255,255);
+  cursor: pointer;
+  margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(171,171,171);
+  border-radius: 50%;
+  border: 8px solid rgb(255,255,255);
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type=range]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(171,171,171);
+  border-radius: 50%;
+  border: 8px solid rgb(255,255,255);
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: rgba(248,247,244,0.5);
+}
+
+.filter__item:nth-of-type(2) {
+  margin-left: 15px;
+}
+
+.filter__item:nth-of-type(2) input[type="range"] {
+  margin: 0;
+  padding: 0;
+  margin-top: 22px;
+  margin-left: 19px;
+  width: 176px;
+  position: relative;
+}
+
+input[type="range"]::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: -22px;
+  width: 220px;
+  height: 36px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 18px;
+}
+
+/*Ползунок - конец*/
+
+/*Фильтр жирности - начало*/
+
+/*Фильтр жирности - конец*/
 
 .filter__btn {
   padding: 0;
