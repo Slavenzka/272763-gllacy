@@ -282,6 +282,7 @@
           </div>
         </section>
       </main>
+    </div>
 
       <footer class="footer-main">
         <div class="footer-wrapper"> 
@@ -386,8 +387,8 @@
         </div>  
     </footer>
 
-    <div class="feedback-form">
-      <div class="feedback-form__wrapper"> 
+    <div class="feedback-form-wrapper">
+      <div class="feedback-form"> 
         <b>Мы обязательно вам ответим!</b>
         <form class="feedback-form__content" action="#" method="post">
           <p class="feedback-form__name">
@@ -398,13 +399,22 @@
             <label class="visually-hidden">Укажите почту для ответа:</label>
             <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
           </p>
-          <textarea cols="48">Напишите что-нибудь...</textarea>
+          <textarea placeholder="Напишите что-нибудь..."></textarea>
           <button class="btn feedback-form__btn">Отправить</button>
         </form>
         <button class="feedback__btn-close"><span class="visually-hidden">Закрыть</span></button>
       </div>
     </div>
-  </div>
+  
+  <script>
+    var start = document.querySelector(".btn-feedback");
+    
+    start.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      
+      console.log("Button clicked!");
+    });
+  </script>
   
   </body>
   
