@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -18,23 +18,40 @@
         <header class="header-main">
           <nav class="navigation-main">      
             <a class="navigation-main__logo">
-              <img class="navigation-main__logo-pic" src="img/Header-Logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
+              <img class="navigation-main__logo-pic" src="img/header-logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
             </a>
             <ul class="navigation-site">
               <li class="navigation-site__item">
                 <a href="catalog.html" class="navigation-site__item-link"><span>Каталог</span></a>
                 <div class="navigation-catalog__wrapper">
                   <ul class="navigation-catalog">
-                    <li class="navigation-catalog__item" ><a href="#">Новинки</a></li>
-                    <li class="navigation-catalog__item" ><a href="#">Сливочное</a></li>
-                    <li class="navigation-catalog__item"><a href="#">Щербеты</a></li>
-                    <li class="navigation-catalog__item" ><a href="#">Фруктовый лед</a></li>
-                    <li class="navigation-catalog__item" ><a href="#">Мелорин</a></li>
+                    <li class="navigation-catalog__item">
+                      <a href="#">Новинки</a>
+                    </li>
+                    <li class="navigation-catalog__item">
+                      <a href="#">Сливочное</a>
+                    </li>
+                    <li class="navigation-catalog__item">
+                      <a href="#">Щербеты</a>
+                    </li>
+                    <li class="navigation-catalog__item">
+                      <a href="#">Фруктовый лед</a></li>
+                    <li class="navigation-catalog__item">
+                      <a href="#">Мелорин</a>
+                    </li>
                   </ul>
                 </div>
               </li>
-              <li class="navigation-site__item"><a href="#" class="navigation-site__item-link"><span>Доставка и оплата</span></a></li>
-              <li class="navigation-site__item"><a href="#" class="navigation-site__item-link"><span>О Компании</span></a></li>
+              <li class="navigation-site__item">
+                <a href="#" class="navigation-site__item-link">
+                  <span>Доставка и оплата</span>
+                </a>
+              </li>
+              <li class="navigation-site__item">
+                <a href="#" class="navigation-site__item-link">
+                  <span>О Компании</span>
+                </a>
+              </li>
             </ul>
           </nav>
           <div class="navigation-aux">   
@@ -274,7 +291,7 @@
           <div class="full-contacts__map-wrapper">
             <img class="full-contacts__map" src="img/map.jpg" width="1200" height="429" alt="Расположение магазина на карте">
           </div>
-          <iframe class="full-contacts__map-embedded" src="https://yandex.ru/map-widget/v1/-/CBe3rAxADB" width="1200" height="429" frameborder="0"></iframe> 
+          <iframe class="full-contacts__map-embedded" src="https://yandex.ru/map-widget/v1/-/CBe3rAxADB" width="1200" height="429"></iframe> 
           <div class="contact-details">
             <h3 class="contact-details__location">Адрес главного офиса и офлайн магазина:</h3>
             <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
@@ -363,9 +380,15 @@
                 </svg>
               </a>
             </li>
-            <li class="about__item"><a href="#">О производстве</a></li>
-            <li class="about__item"><a href="#">Наши документы</a></li>
-            <li class="about__item"><a href="#">Экологические стандарты</a></li>
+            <li class="about__item">
+              <a href="#">О производстве</a>
+            </li>
+            <li class="about__item">
+              <a href="#">Наши документы</a>
+            </li>
+            <li class="about__item">
+              <a href="#">Экологические стандарты</a>
+            </li>
           </ul>
            <div class="creator-info">
             <a href="#s">
@@ -409,31 +432,7 @@
       </div>
     </div>
   
-  <script>
-    var open = document.querySelector(".btn-feedback");
-    var modal = document.querySelector(".feedback-form-wrapper");
-    var close = modal.querySelector(".feedback__btn-close");
-    var userName = modal.querySelector("[name=feedback-name]");
-    var userMail = modal.querySelector("[name=feedback-email]");
-    var form = modal.querySelector(".feedback-form__content");
-    
-    open.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      modal.classList.add("modal-show");
-      userName.focus();
-    });
-    
-    close.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      modal.classList.remove("modal-show");
-    });
-    
-    form.addEventListener("submit", function(evt) {
-      if (!userName.value || !userMail.value) {
-      evt.preventDefault();
-      console.log("Введите имя и почту!");
-      }
-    });
+  <script src="js/scripts-min.js">
   </script>
   
   </body>
