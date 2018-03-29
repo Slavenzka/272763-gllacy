@@ -271,7 +271,10 @@
         </div>
         <section class="full-contacts">
           <h2 class="visually-hidden ">Как нас найти</h2>
-          <img class="full-contacts__map" src="img/map.jpg" width="1200" height="429" alt="Расположение магазина на карте">
+          <div class="full-contacts__map-wrapper">
+            <img class="full-contacts__map" src="img/map.jpg" width="1200" height="429" alt="Расположение магазина на карте">
+          </div>
+          <iframe class="full-contacts__map-embedded" src="https://yandex.ru/map-widget/v1/-/CBe3rAxADB" width="1200" height="429" frameborder="0"></iframe> 
           <div class="contact-details">
             <h3 class="contact-details__location">Адрес главного офиса и офлайн магазина:</h3>
             <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
@@ -407,12 +410,29 @@
     </div>
   
   <script>
-    var start = document.querySelector(".btn-feedback");
+    var open = document.querySelector(".btn-feedback");
+    var modal = document.querySelector(".feedback-form-wrapper");
+    var close = modal.querySelector(".feedback__btn-close");
+    var userName = modal.querySelector("[name=feedback-name]");
+    var userMail = modal.querySelector("[name=feedback-email]");
+    var form = modal.querySelector(".feedback-form__content");
     
-    start.addEventListener("click", function(evt) {
+    open.addEventListener("click", function(evt) {
       evt.preventDefault();
-      
-      console.log("Button clicked!");
+      modal.classList.add("modal-show");
+      userName.focus();
+    });
+    
+    close.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      modal.classList.remove("modal-show");
+    });
+    
+    form.addEventListener("submit", function(evt) {
+      if (!userName.value || !userMail.value) {
+      evt.preventDefault();
+      console.log("Введите имя и почту!");
+      }
     });
   </script>
   
