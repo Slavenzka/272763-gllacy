@@ -786,18 +786,30 @@ img {
 }
 
 #product-1:checked ~ .site-wrapper {
-  background-color: #849d8f;
+  background-color: rgb(132,157,143);
   background-image: url("../img/slider-item1.png");
 }
 
+#product-1:checked ~ .footer-main {
+  background-color: rgb(132,157,143);
+}
+
 #product-2:checked ~ .site-wrapper {
-  background-color: #8996a6;
+  background-color: rgb(137,150,166);
   background-image: url("../img/slider-item2.png");
 }
 
+#product-2:checked ~ .footer-main {
+  background-color: rgb(137,150,166);
+}
+
 #product-3:checked ~ .site-wrapper {
-  background-color: #9d8b84;
+  background-color: rgb(157,139,132);
   background-image: url("../img/slider-item3.png");
+}
+
+#product-3:checked ~ .footer-main {
+  background-color: rgb(157,139,132);
 }
 
 #product-1:checked ~ .site-wrapper #slide1,
@@ -1271,8 +1283,6 @@ img {
 
 .full-contacts {
   padding: 0 0px;
-  width: 1200px;
-  margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -1297,8 +1307,9 @@ img {
           box-sizing: border-box;
   width: 302px;
   position: absolute;
+  margin-right: 50%;
   top: 62px;
-  right: 27px;
+  right: -573px;
   padding-top: 29px;
   padding-right: 0px;
   padding-left: 25px;
@@ -1310,21 +1321,24 @@ img {
   z-index: 2;
 }
 
-.full-contacts__map-wrapper {
-  position: absolute;
+.full-contacts__static-wrapper {
   top: 0;
   left: 0;
+  right: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: absolute;
   
   z-index: 1;
 }
 
 .full-contacts__map-embedded {
+  width: 100%;
   position: relative;
   z-index: 2;
-  border: 0;
 }
 
-.full-contacts__map-wrapper::after {
+.full-contacts__static-wrapper::after {
   content: "";
   position: absolute;
   width: 182px;
@@ -1335,7 +1349,7 @@ img {
   background-image: url("../img/map-pin-shadow.png");
 }
 
-.full-contacts__map-wrapper::before {
+.full-contacts__static-wrapper::before {
   content: "";
   position: absolute;
   width: 80px;
@@ -2506,12 +2520,9 @@ img {
 
 /*Футер*/
 
-.footer-main {
-  max-width: 1200px;
-  padding: 0 0px;
-  margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.footer-main { 
+  width: 100%;
+/*  background-color: red;*/
 }
 
 .footer-wrapper {
@@ -2522,6 +2533,10 @@ img {
       -ms-flex-pack: start;
           justify-content: flex-start;
   height: 103px;
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding: 0 0px;
+  margin: 0 auto;
 }
 
 .social {
