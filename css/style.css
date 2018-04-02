@@ -239,7 +239,6 @@ img {
   list-style: none;
 }
 
-
 .navigation-site__item {
   margin-right: 1px;
 }
@@ -2688,7 +2687,7 @@ input[type="checkbox"]:nth-of-type(4):checked + label:hover::before {
   border: 3px solid rgba(255,255,255,0.7);
 }
 
-.social__link:active svg path{
+.social__link:active path{
   fill: rgb(233,233,233); 
 }
 
