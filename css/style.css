@@ -687,7 +687,7 @@ img {
 /*Слайдер - начало*/
 
 .site-wrapper {
-  width: 100%;
+  min-width: 1200px;
   background-color: rgb(132,157,143);
   background-image: url("../img/slider-item1.png");
   background-repeat: no-repeat;
@@ -2179,6 +2179,15 @@ input[type="radio"]:checked + label:hover::after {
   border-radius: 18px;  
 }
 
+.filter__item:nth-of-type(3) input[disabled] + label::before {
+  border: 3px solid rgba(255,255,255,0.4);
+}
+
+.filter__item:nth-of-type(3) input[disabled] + label::after,
+.filter__item:nth-of-type(3) input[disabled] + label:hover::after {
+  border: 4px solid rgba(255,255,255,0.4);
+}
+
 /*Фильтр жирности - конец*/
 
 /*Выбор наполнителей - начало*/
@@ -2233,8 +2242,13 @@ input[type="radio"]:checked + label:hover::after {
   left: -1px;
   
   border: 2px solid rgba(255,255,255,0.8);
-  border-radius: 2px;
+  border-radius: 3px;
   cursor: pointer;
+}
+
+.filter__item:nth-of-type(4) .filter__input--disabled + label::before,
+.filter__item:nth-of-type(4) .filter__input--disabled + label:hover::before {
+  border: 2px solid rgba(255,255,255,0.4);
 }
 
 .filter__item:nth-of-type(4) label:nth-of-type(4)::before {
@@ -2243,6 +2257,11 @@ input[type="radio"]:checked + label:hover::after {
 
 input[type="checkbox"]:not(:checked) + label:hover::before {
   border: 2px solid rgba(255,255,255,1);  
+}
+
+.filter__item:nth-of-type(4) input[disabled]:not(:checked) + label::before,
+.filter__item:nth-of-type(4) input[disabled]:not(:checked) + label:hover::before {
+  border: 2px solid rgba(255,255,255,0.4); 
 }
 
 input[type="checkbox"]:checked + label::before {
@@ -2257,7 +2276,20 @@ input[type="checkbox"]:checked + label::before {
   border: 0;
 }
 
-input[type="checkbox"]:checked + label:hover::before {
+.filter__item:nth-of-type(4) input[disabled]:checked + label::before,
+.filter__item:nth-of-type(4) input[disabled]:checked + label:hover::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 20px;
+  top: 0px;
+  left: -3px;
+  
+  background-image: url("../img/filter-checkbox-disabled.svg");
+  border: 0;
+}
+
+input[type="checkbox"]:not(.filter__input--disabled):checked + label:hover::before {
   content: "";
   position: absolute;
   width: 25px;
@@ -2603,7 +2635,7 @@ input[type="checkbox"]:nth-of-type(4):checked + label:hover::before {
 /*Футер*/
 
 .footer-main { 
-  width: 100%;
+  min-width: 1200px;
 }
 
 .footer-wrapper {
