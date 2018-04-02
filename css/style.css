@@ -74,6 +74,7 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 1200px;
   
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
@@ -687,7 +688,6 @@ img {
 /*Слайдер - начало*/
 
 .site-wrapper {
-  min-width: 1200px;
   background-color: rgb(132,157,143);
   background-image: url("../img/slider-item1.png");
   background-repeat: no-repeat;
